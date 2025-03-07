@@ -9,7 +9,7 @@
 }
 
 body {
-    max-width: 650px;
+    max-width: 900px;
     margin: 40px auto;
     padding: 0 10px;
     color: var(--color-body);
@@ -144,4 +144,24 @@ a {
         position: inherit;
         margin-bottom: 10pt;
     }
+}
+
+.profile-pic {
+    width: 150px; /* Make the image a bit smaller */
+    height: 150px; /* Ensure it's a square for proper circular cropping */
+    object-fit: cover; /* Ensures the image fills the circle without distortion */
+    border-radius: 50%; /* Makes the image fully circular */
+    margin-right: 20px;
+    margin-top: 10px; /* Adds space between the header and the image */
+}
+
+.content {
+    display: flex;
+    align-items: flex-start;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.text-content {
+    flex: 1;
 }
