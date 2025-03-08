@@ -196,6 +196,6 @@ a {
 
 .family-section {
     display: flex;
-    justify-content: center;  /* Centers text */
+    justify-content: center;
     margin-bottom: 20px;
 }
