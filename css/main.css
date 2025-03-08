@@ -186,14 +186,9 @@ a {
     display: block;
     margin: 0 auto;
     margin-right: 20px;
-    width: 20px;
+    width: 200px;
     height: auto;
 }
-
-.homepage-footer {
-    margin: 0 auto;
-}
-
 .family-section {
     display: flex;
     justify-content: center;
