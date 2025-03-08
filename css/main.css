@@ -169,6 +169,33 @@ a {
     margin: 0 auto;
 }
 
+@media (max-width: 650px) {
+    .content {
+        display: block;
+        padding: 10px;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+}
+
 .text-content {
     flex: 1;
+}
+
+.family-photo {
+    display: block;
+    margin: 0 auto;
+    margin-right: 20px;
+    width: 200px;
+    height: auto;
+}
+
+.homepage-footer {
+    margin: 0 auto;
+}
+
+.family-section {
+    display: flex;
+    justify-content: center;  /* Centers text */
+    margin-bottom: 20px;
 }
