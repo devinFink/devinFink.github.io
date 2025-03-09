@@ -18,12 +18,14 @@ body {
 }
 
 @media (min-width: 2000px) {
-    max-width: 1500px;
-    margin: 40px auto;
-    padding: 0 10px;
-    color: var(--color-body);
-    background: var(--color-bg);
-    min-height: 100vh;
+    body {
+        max-width: 1500px;
+        margin: 40px auto;
+        padding: 0 10px;
+        color: var(--color-body);
+        background: var(--color-bg);
+        min-height: 100vh;
+    }
 }
 /* generic stuff */
 
