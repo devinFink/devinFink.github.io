@@ -245,6 +245,7 @@ a {
 @media (max-width: 650px) {
     .footer {
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         background-color: var(--color-panel);
