@@ -35,3 +35,54 @@ div.project {
 .image-link:hover {
     transform: scale(1.1); /* Scales up the image container */
 }
+
+.game-trailer {
+    background-color: var(--color-panel);
+    border-radius: 10pt;
+    margin-right: 10pt;
+}
+
+.project-block {
+    display: flex;
+    gap: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    width: 100%;
+}
+
+.video {
+    flex: 1;
+}
+video {
+    width: 100%;
+    border-radius: 10px;
+}
+.info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 0;
+}
+.info div {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.info h2 {
+    margin-right: 10px;
+    line-height: .75;
+}
+
+.info h3 {
+    justify-content: center;
+    line-height: .75;
+}
+
+.project-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
