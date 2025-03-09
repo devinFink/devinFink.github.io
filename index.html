@@ -6,9 +6,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Personal website of Devin Fink">
-    <title>Home | Devin Fink</title>
-    <link rel="stylesheet" href="css/main.css">
+    <title>Projects | Devin Fink</title>
+    <link rel="stylesheet" href="css/projects.css">
     <script src="https://kit.fontawesome.com/0c2f64f640.js" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
@@ -16,33 +17,38 @@
 <h2 class="subtitletext">Gameplay Engineer</h2>
 <div id="navbar">
     <a href="/" class="current">Home</a>
-    <a href="/games">Games/Projects</a>
+    <a href="/about">About</a>
     <a href="/resume">Resume</a>
 </div>
-
-<div class="content">
-    <img src="images/profile.jpg" alt="Devin Fink" class="profile-pic">
-    <div class="text-content">
-        <h2 id="welcome">Welcome!</h2>
-        <p>
-            I'm Devin Fink, a student at the University of Utah studying Computer Science with an Emphasis in Game Development.
-        </p>
-        <h2 id="about">About Me</h2>
-        <p>
-            I grew up surrounded by every console and game you could imagine, instilled with a love of games from my game programmer father.
-            I believe in the power of games to enrich lives, develop relationships, and tell stories, and I want to use my skills to develop
-            the next generation of life-changing experiences. I have experience as both a Gameplay engineer and a QA Engineer, and most recently
-            I have been fascinated with the world of graphics programming.
-        </p>
-        <hr>
-        <div class="family-section">
-            <img class="family-photo" src="images/familyphoto.jpg" alt="My family">
-            <p>
-                In my free time, I love to spend evenings playing couch co-op games with my wife (anybody else playing Split Fiction recently?), or spending time online with friends.
-                I also DM a multi-year campaign of Dungeons and Dragons, or you may find me painting miniatures next to my wife as she rebinds books and our puppy sleeps nearby.
-            </p>
-        </div>
+<h2 id="games" class="subtitletext">Games</h2>
+<div class="grid-container">
+    <div class="project" id="Clockwork Sword">
+        <a href="/clockworksword" class="image-link">
+            <img class='gameart' src="images/clockworkSword.png" alt="Title art for my game 'Clockwork Sword'">
+        </a>
     </div>
+    <div class="project" id="Immunity Wars">
+        <a href="/immunitywars" class="image-link">
+            <img class='gameart' src="images/immunityWars.png" alt="Title art for my game 'Immunity Wars'">
+        </a>
+    </div>
+    <div class="project" id="Elemental Engagements">
+        <a href="/elementalengagements" class="image-link">
+            <img class='gameart' src="images/elementalEngagements.jpg" alt="Title art for my game 'Elemental Engagements'">
+        </a>
+    </div>
+</div>
+<h2 id="projects" class="subtitletext">Projects</h2>
+<div class="project" id="ray tracer">
+    <h2>Fragment Shader Ray Tracing</h2>
+    <p>
+        Calculated color values in a fragment shader via ray tracing for a complex scene of multiple reflective spheres, taking into account ambient light,
+        bounce limits, and specular reflection.
+    </p>
+    <img class='gameart' src="images/raytracer.png" alt="Demonstration screenshot of my Fragment shader ray tracing implementation">
+</div>
+<div class="project" id="Coming Soon">
+    <h2>More In Progress!</h2>
 </div>
 
 <footer class="footer">
@@ -62,5 +68,4 @@
 </footer>
 
 </body>
-
 </html>
