@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Personal website of Devin Fink">
+    <title>Physarum Simulation | Devin Fink</title>
+    <link rel="stylesheet" href="css/projects.css">
+    <script src="https://kit.fontawesome.com/0c2f64f640.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+<h1 class="centertext">Devin Fink</h1>
+<h2 class="subtitletext">Gameplay Engineer/Graphics Engineer</h2>
+<div id="navbar">
+    <a href="/">Games/Projects</a>
+    <a href="/about">About</a>
+    <a href="/resume">Resume</a>
+</div>
+
+<h2 class="subtitletext">Physarum Simulation</h2>
+<div class="centertext">
+    <p>This is a 3D implementation of the traditional 2D Slime Mold Simulation</p>
+</div>
+<div class="project-block">
+    <iframe width="500" height="300"
+            src="https://www.youtube.com/embed/5brtbToJBDI">
+    </iframe>
+    <div class="info">
+        <div><h2>Roles:</h2><h3>Programmer, Rendering</h3></div>
+        <div><h2>Team Size:</h2><h3>2</h3></div>
+        <div><h2>Platforms:</h2><h3>PC</h3></div>
+        <div><h2>Engine/Language:</h2><h3>Unity/HLSL</h3></div>
+    </div>
+</div>
+
+<div class="project-content" id="Project Summary">
+    <iframe width="552" height="167" frameborder="0" src="https://itch.io/embed/3481471"><a href="https://liamhealey.itch.io/slime-mold-simulation">3D Slime Mold Simulation by LiamHealey, devinfink</a></iframe>
+    <h2>Development</h2>
+    <h3>
+        This project was built in a partnership, with my partner focusing primarily on simulation logic within a Compute shader,
+        and me focusing primarily on the Rendering Logic using Volumetric Ray Marching built within a Fragment Shader. After
+        the Compute shader calculates the positions of each agent, the information is passed as a 3D texture file to the fragment shader.
+        This Texture is then marched through, creating the fog-like effects that you see in the scene. The box has proper culling effects,
+        so the user can effectively travel through the simulation and inspect it from the inside.
+    </h3>
+</div>
+
+<footer class="footer">
+    <h3>Let's Talk!</h3>
+    <div class="contact">
+        <p><a href="mailto:devinfink007@gmail.com">Email: devinfink007@gmail.com</a></p>
+        <p>Phone: (801) 441-9441</p>
+    </div>
+    <div class="social">
+        <a href="https://www.linkedin.com/in/devin-fink-727450235/" target="_blank">
+            <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/devinFink" target="_blank">
+            <i class="fab fa-github"></i>
+        </a>
+    </div>
+</footer>
+
+</body>
+
+</html>
