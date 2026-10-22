@@ -1,0 +1,12 @@
+{%- assign h = page.hero -%}
+{%- if h.type == 'youtube' -%}
+<button class="yt-facade" type="button" data-yt="{{ h.id }}" aria-label="Play {{ page.title }} video">
+<img src="{{ h.poster | relative_url }}" alt="">
+<span class="yt-play"><i class="fa-solid fa-play"></i></span>
+<span class="yt-label">{{ h.label | default: 'Watch the trailer' }}</span>
+</button>
+{%- elsif h.type == 'video' -%}
+<video src="{{ h.src | relative_url }}" poster="{{ h.poster | relative_url }}" controls muted playsinline preload="metadata"></video>
+{%- else -%}
+<a class="zoomable" href="{{ h.src | relative_url }}" data-caption="{{ h.caption | escape }}"><img src="{{ h.src | relative_url }}" alt="{{ h.caption | default: page.title | escape }}"></a>
+{%- endif -%}

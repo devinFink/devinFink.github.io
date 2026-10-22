@@ -1,0 +1,18 @@
+{%- comment -%}
+Params: src (display image), full (lightbox image, defaults to src), alt, caption,
+svg (path under _includes, renders an inline diagram), wide, todo (placeholder text when there's no src/svg yet)
+{%- endcomment -%}
+{%- if include.src or include.svg -%}
+<figure class="figure{% if include.wide %} is-wide{% endif %}{% if include.svg %} is-diagram{% endif %}">
+{%- if include.svg -%}
+<div class="diagram-scroll">{% include {{ include.svg }} %}</div>
+{%- else -%}
+<a class="zoomable" href="{{ include.full | default: include.src | relative_url }}" data-caption="{{ include.caption | escape }}"><img src="{{ include.src | relative_url }}" alt="{{ include.alt | default: include.caption | escape }}" loading="lazy"></a>
+{%- endif -%}
+{%- if include.caption -%}<figcaption>{{ include.caption }}</figcaption>{%- endif -%}
+</figure>
+{%- elsif include.todo -%}
+{%- unless jekyll.environment == "production" -%}
+<figure class="figure todo-slot{% if include.wide %} is-wide{% endif %}"><i class="fa-solid fa-camera"></i><span>{{ include.todo }}</span></figure>
+{%- endunless -%}
+{%- endif -%}

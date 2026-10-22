@@ -1,0 +1,46 @@
+<svg class="dg" viewBox="0 0 820 364" role="img" aria-label="Physarum simulation and rendering pipeline" xmlns="http://www.w3.org/2000/svg">
+<title>Physarum simulation and rendering pipeline</title>
+<defs><marker id="ah-physarum-pipeline" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7f849c"/></marker></defs>
+<rect class="zone" x="4" y="16" width="812" height="104" rx="14"/>
+<text class="dg-h" x="18" y="36">COMPUTE SHADER · SIMULATION (PARTNER)</text>
+<rect class="box " x="14" y="52" width="112" height="48" rx="10"/>
+<text x="70" y="81" text-anchor="middle">Sense</text>
+<rect class="box " x="146" y="52" width="112" height="48" rx="10"/>
+<text x="202" y="81" text-anchor="middle">Rotate</text>
+<rect class="box " x="278" y="52" width="112" height="48" rx="10"/>
+<text x="334" y="81" text-anchor="middle">Move</text>
+<rect class="box " x="410" y="52" width="112" height="48" rx="10"/>
+<text x="466" y="81" text-anchor="middle">Deposit</text>
+<rect class="box " x="552" y="52" width="170" height="48" rx="10"/>
+<text x="637" y="81" text-anchor="middle">Diffuse &amp; decay</text>
+<path class="edge " d="M126,76 L146,76" marker-end="url(#ah-physarum-pipeline)"/>
+<path class="edge " d="M258,76 L278,76" marker-end="url(#ah-physarum-pipeline)"/>
+<path class="edge " d="M390,76 L410,76" marker-end="url(#ah-physarum-pipeline)"/>
+<path class="edge " d="M522,76 L552,76" marker-end="url(#ah-physarum-pipeline)"/>
+<rect class="box box-mauve" x="310" y="140" width="210" height="44" rx="10"/>
+<text x="415" y="167" text-anchor="middle">3D trail texture</text>
+<path class="edge edge-mauve" d="M637,100 L637,162 L520,162" marker-end="url(#ah-physarum-pipeline)"/>
+<rect class="zone" x="4" y="204" width="812" height="154" rx="14"/>
+<text class="dg-h" x="18" y="224">FRAGMENT SHADER · VOLUMETRIC RAY MARCH (ME)</text>
+<rect class="box box-blue" x="14" y="244" width="150" height="52" rx="10"/>
+<text x="89" y="267" text-anchor="middle">Ray–box entry</text>
+<text class="dg-s" x="89" y="284" text-anchor="middle">or start at camera</text>
+<rect class="box " x="190" y="244" width="140" height="52" rx="10"/>
+<text x="260" y="267" text-anchor="middle">March a step</text>
+<text class="dg-s" x="260" y="284" text-anchor="middle">fixed step size</text>
+<rect class="box " x="356" y="244" width="150" height="52" rx="10"/>
+<text x="431" y="267" text-anchor="middle">Sample density</text>
+<text class="dg-s" x="431" y="284" text-anchor="middle">from 3D texture</text>
+<rect class="box " x="532" y="244" width="150" height="52" rx="10"/>
+<text x="607" y="267" text-anchor="middle">Accumulate</text>
+<text class="dg-s" x="607" y="284" text-anchor="middle">color + opacity</text>
+<rect class="box box-green" x="708" y="244" width="100" height="52" rx="10"/>
+<text x="758" y="275" text-anchor="middle">Pixel</text>
+<path class="edge " d="M164,270 L190,270" marker-end="url(#ah-physarum-pipeline)"/>
+<path class="edge " d="M330,270 L356,270" marker-end="url(#ah-physarum-pipeline)"/>
+<path class="edge " d="M506,270 L532,270" marker-end="url(#ah-physarum-pipeline)"/>
+<path class="edge " d="M682,270 L708,270" marker-end="url(#ah-physarum-pipeline)"/>
+<path class="edge edge-mauve" d="M431,184 L431,244" marker-end="url(#ah-physarum-pipeline)"/>
+<path class="edge edge-blue" d="M607,296 C607,322 260,322 260,298" marker-end="url(#ah-physarum-pipeline)"/>
+<text class="dg-s" x="431" y="346" text-anchor="middle">until the ray exits or is opaque</text>
+</svg>

@@ -1,0 +1,41 @@
+<svg class="dg" viewBox="0 0 820 316" role="img" aria-label="Turn-based game loop" xmlns="http://www.w3.org/2000/svg">
+<title>Turn-based game loop</title>
+<defs><marker id="ah-turn-loop" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7f849c"/></marker></defs>
+<rect class="zone" x="4" y="24" width="812" height="160" rx="14"/>
+<text class="dg-h" x="18" y="44">PLAYER TURN</text>
+<rect class="box box-blue" x="14" y="66" width="135" height="56" rx="10"/>
+<text x="81.5" y="91" text-anchor="middle">Player turn</text>
+<text class="dg-s" x="81.5" y="108" text-anchor="middle">refresh actions</text>
+<rect class="box " x="178" y="66" width="135" height="56" rx="10"/>
+<text x="245.5" y="91" text-anchor="middle">Select unit</text>
+<text class="dg-s" x="245.5" y="108" text-anchor="middle">highlight options</text>
+<rect class="box " x="342" y="66" width="135" height="56" rx="10"/>
+<text x="409.5" y="91" text-anchor="middle">Choose ability</text>
+<text class="dg-s" x="409.5" y="108" text-anchor="middle">valid targets</text>
+<rect class="box " x="506" y="66" width="135" height="56" rx="10"/>
+<text x="573.5" y="91" text-anchor="middle">Pick target hex</text>
+<text class="dg-s" x="573.5" y="108" text-anchor="middle">range check</text>
+<rect class="box " x="670" y="66" width="135" height="56" rx="10"/>
+<text x="737.5" y="91" text-anchor="middle">Resolve</text>
+<text class="dg-s" x="737.5" y="108" text-anchor="middle">apply effects</text>
+<path class="edge " d="M149,94 L178,94" marker-end="url(#ah-turn-loop)"/>
+<path class="edge " d="M313,94 L342,94" marker-end="url(#ah-turn-loop)"/>
+<path class="edge " d="M477,94 L506,94" marker-end="url(#ah-turn-loop)"/>
+<path class="edge " d="M641,94 L670,94" marker-end="url(#ah-turn-loop)"/>
+<path class="edge edge-blue" d="M737.5,122 C737.5,150 245.5,150 245.5,124" marker-end="url(#ah-turn-loop)"/>
+<text class="dg-s" x="494" y="172" text-anchor="middle">actions left: keep going</text>
+<rect class="box " x="670" y="226" width="135" height="56" rx="10"/>
+<text x="737.5" y="251" text-anchor="middle">End turn</text>
+<text class="dg-s" x="737.5" y="268" text-anchor="middle">button or no actions</text>
+<rect class="box box-mauve" x="420" y="226" width="170" height="56" rx="10"/>
+<text x="505" y="251" text-anchor="middle">Pathogen turn</text>
+<text class="dg-s" x="505" y="268" text-anchor="middle">enemy AI acts</text>
+<rect class="box box-green" x="178" y="226" width="170" height="56" rx="10"/>
+<text x="263" y="251" text-anchor="middle">Check objectives</text>
+<text class="dg-s" x="263" y="268" text-anchor="middle">win / lose</text>
+<path class="edge " d="M767.5,122 L767.5,226" marker-end="url(#ah-turn-loop)"/>
+<path class="edge " d="M670,254 L590,254" marker-end="url(#ah-turn-loop)"/>
+<path class="edge " d="M420,254 L348,254" marker-end="url(#ah-turn-loop)"/>
+<path class="edge edge-green" d="M178,254 L81.5,254 L81.5,122" marker-end="url(#ah-turn-loop)"/>
+<text class="dg-s" x="128" y="210" text-anchor="middle">next round</text>
+</svg>

@@ -1,0 +1,53 @@
+<svg class="dg" viewBox="0 0 820 350" role="img" aria-label="Two-pass photon mapping renderer" xmlns="http://www.w3.org/2000/svg">
+<title>Two-pass photon mapping renderer</title>
+<defs><marker id="ah-photon-mapping" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7f849c"/></marker></defs>
+<rect class="zone" x="4" y="16" width="812" height="112" rx="14"/>
+<text class="dg-h" x="18" y="36">PASS 1 · PHOTON TRACING</text>
+<rect class="box box-peach" x="14" y="50" width="110" height="56" rx="10"/>
+<text x="69" y="75" text-anchor="middle">Lights</text>
+<text class="dg-s" x="69" y="92" text-anchor="middle">emitters</text>
+<rect class="box " x="150" y="50" width="140" height="56" rx="10"/>
+<text x="220" y="75" text-anchor="middle">Emit photons</text>
+<text class="dg-s" x="220" y="92" text-anchor="middle">random directions</text>
+<rect class="box " x="316" y="50" width="200" height="56" rx="10"/>
+<text x="416" y="75" text-anchor="middle">Bounce through scene</text>
+<text class="dg-s" x="416" y="92" text-anchor="middle">BVH traversal</text>
+<rect class="box box-mauve" x="542" y="50" width="150" height="56" rx="10"/>
+<text x="617" y="75" text-anchor="middle">Photon map</text>
+<text class="dg-s" x="617" y="92" text-anchor="middle">stored hits</text>
+<path class="edge " d="M124,78 L150,78" marker-end="url(#ah-photon-mapping)"/>
+<path class="edge " d="M290,78 L316,78" marker-end="url(#ah-photon-mapping)"/>
+<path class="edge " d="M516,78 L542,78" marker-end="url(#ah-photon-mapping)"/>
+<rect class="zone" x="4" y="146" width="812" height="196" rx="14"/>
+<text class="dg-h" x="18" y="166">PASS 2 · RENDERING · MULTITHREADED</text>
+<rect class="box box-blue" x="14" y="218" width="110" height="56" rx="10"/>
+<text x="69" y="243" text-anchor="middle">Camera</text>
+<text class="dg-s" x="69" y="260" text-anchor="middle">per pixel</text>
+<rect class="box " x="150" y="218" width="140" height="56" rx="10"/>
+<text x="220" y="243" text-anchor="middle">Primary rays</text>
+<text class="dg-s" x="220" y="260" text-anchor="middle">N samples, AA + DoF</text>
+<rect class="box " x="316" y="218" width="110" height="56" rx="10"/>
+<text x="371" y="243" text-anchor="middle">Hit point</text>
+<text class="dg-s" x="371" y="260" text-anchor="middle">via BVH</text>
+<rect class="box box-mauve" x="456" y="176" width="190" height="46" rx="10"/>
+<text x="551" y="196" text-anchor="middle">Caustics</text>
+<text class="dg-s" x="551" y="213" text-anchor="middle">photon density estimate</text>
+<rect class="box " x="456" y="228" width="190" height="46" rx="10"/>
+<text x="551" y="248" text-anchor="middle">Direct light</text>
+<text class="dg-s" x="551" y="265" text-anchor="middle">soft-shadow samples</text>
+<rect class="box " x="456" y="280" width="190" height="46" rx="10"/>
+<text x="551" y="300" text-anchor="middle">Indirect light</text>
+<text class="dg-s" x="551" y="317" text-anchor="middle">Monte-Carlo GI</text>
+<rect class="box box-green" x="680" y="218" width="120" height="56" rx="10"/>
+<text x="740" y="243" text-anchor="middle">Pixel</text>
+<text class="dg-s" x="740" y="260" text-anchor="middle">average samples</text>
+<path class="edge " d="M124,246 L150,246" marker-end="url(#ah-photon-mapping)"/>
+<path class="edge " d="M290,246 L316,246" marker-end="url(#ah-photon-mapping)"/>
+<path class="edge " d="M426,246 L440,246 L440,199 L456,199" marker-end="url(#ah-photon-mapping)"/>
+<path class="edge edge-green" d="M646,199 L664,199 L664,246 L680,246" marker-end="url(#ah-photon-mapping)"/>
+<path class="edge " d="M426,246 L440,246 L440,251 L456,251" marker-end="url(#ah-photon-mapping)"/>
+<path class="edge edge-green" d="M646,251 L664,251 L664,246 L680,246" marker-end="url(#ah-photon-mapping)"/>
+<path class="edge " d="M426,246 L440,246 L440,303 L456,303" marker-end="url(#ah-photon-mapping)"/>
+<path class="edge edge-green" d="M646,303 L664,303 L664,246 L680,246" marker-end="url(#ah-photon-mapping)"/>
+<path class="edge edge-mauve" d="M600,106 L600,176" marker-end="url(#ah-photon-mapping)"/>
+</svg>

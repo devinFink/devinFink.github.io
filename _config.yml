@@ -1,0 +1,55 @@
+title: Devin Fink
+tagline: Gameplay & Graphics Engineer
+description: >-
+  Devin Fink, gameplay and graphics engineer. Shipped games on Steam plus
+  real-time rendering projects in C++, C#, HLSL and OpenGL.
+url: https://www.devinfink.dev
+baseurl: ""
+repository: devinFink/devinFink.github.io
+lang: en_US
+author: Devin Fink
+
+# Contact (used by the nav, footer and About page)
+email: devinfink007@gmail.com
+phone: "(801) 441-9442"
+linkedin: https://www.linkedin.com/in/devin-fink-727450235/
+github: https://github.com/devinFink
+resume_pdf: /images/JulyResume.pdf
+
+collections:
+  projects:
+    output: true
+    permalink: /:name
+
+defaults:
+  - scope:
+      path: ""
+      type: projects
+    values:
+      layout: project
+  - scope:
+      path: ""
+    values:
+      layout: default
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  auto_ids: true
+  hard_wrap: false
+
+sass:
+  style: compressed
+
+plugins:
+  - jekyll-seo-tag
+
+exclude:
+  - .idea
+  - .claude
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - node_modules

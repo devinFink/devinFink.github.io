@@ -1,0 +1,11 @@
+{%- comment -%}
+Writer's note. Shown on the local dev server only; GitHub Pages builds in
+production mode, which hides it. Pass `heading` for a whole section that still
+needs writing, so the heading disappears in production too.
+{%- endcomment -%}
+{%- unless jekyll.environment == "production" -%}
+{%- if include.heading -%}
+<h2 id="{{ include.heading | slugify }}">{{ include.heading }}</h2>
+{%- endif -%}
+<div class="todo-note"><strong><i class="fa-solid fa-pen-to-square"></i> TODO</strong> {{ include.text }}</div>
+{%- endunless -%}

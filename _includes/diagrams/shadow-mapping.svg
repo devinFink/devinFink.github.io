@@ -1,0 +1,43 @@
+<svg class="dg" viewBox="0 0 820 320" role="img" aria-label="Shadow mapping and environment mapping passes" xmlns="http://www.w3.org/2000/svg">
+<title>Shadow mapping and environment mapping passes</title>
+<defs><marker id="ah-shadow-mapping" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7f849c"/></marker></defs>
+<rect class="zone" x="4" y="16" width="812" height="110" rx="14"/>
+<text class="dg-h" x="18" y="36">PASS 1 · FROM THE LIGHT</text>
+<rect class="box box-peach" x="14" y="50" width="150" height="56" rx="10"/>
+<text x="89" y="75" text-anchor="middle">Light's view</text>
+<text class="dg-s" x="89" y="92" text-anchor="middle">ortho / perspective</text>
+<rect class="box " x="200" y="50" width="200" height="56" rx="10"/>
+<text x="300" y="75" text-anchor="middle">Depth-only render</text>
+<text class="dg-s" x="300" y="92" text-anchor="middle">no color writes</text>
+<rect class="box box-mauve" x="480" y="50" width="190" height="56" rx="10"/>
+<text x="575" y="75" text-anchor="middle">Shadow map</text>
+<text class="dg-s" x="575" y="92" text-anchor="middle">depth texture</text>
+<path class="edge " d="M164,78 L200,78" marker-end="url(#ah-shadow-mapping)"/>
+<path class="edge " d="M400,78 L480,78" marker-end="url(#ah-shadow-mapping)"/>
+<rect class="zone" x="4" y="146" width="812" height="166" rx="14"/>
+<text class="dg-h" x="18" y="166">PASS 2 · FROM THE CAMERA</text>
+<rect class="box box-blue" x="14" y="214" width="120" height="56" rx="10"/>
+<text x="74" y="239" text-anchor="middle">Camera</text>
+<text class="dg-s" x="74" y="256" text-anchor="middle">scene meshes</text>
+<rect class="box " x="160" y="214" width="170" height="56" rx="10"/>
+<text x="245" y="239" text-anchor="middle">Vertex shader</text>
+<text class="dg-s" x="245" y="256" text-anchor="middle">world + light-space pos</text>
+<rect class="box " x="356" y="214" width="100" height="56" rx="10"/>
+<text x="406" y="239" text-anchor="middle">Fragment</text>
+<text class="dg-s" x="406" y="256" text-anchor="middle">shader</text>
+<rect class="box " x="480" y="176" width="190" height="50" rx="10"/>
+<text x="575" y="198" text-anchor="middle">Compare depth</text>
+<text class="dg-s" x="575" y="215" text-anchor="middle">lit or in shadow</text>
+<rect class="box " x="480" y="250" width="190" height="50" rx="10"/>
+<text x="575" y="272" text-anchor="middle">Cube map lookup</text>
+<text class="dg-s" x="575" y="289" text-anchor="middle">reflect(view, normal)</text>
+<rect class="box box-green" x="700" y="214" width="104" height="56" rx="10"/>
+<text x="752" y="247" text-anchor="middle">Final color</text>
+<path class="edge " d="M134,242 L160,242" marker-end="url(#ah-shadow-mapping)"/>
+<path class="edge " d="M330,242 L356,242" marker-end="url(#ah-shadow-mapping)"/>
+<path class="edge " d="M456,242 L468,242 L468,201 L480,201" marker-end="url(#ah-shadow-mapping)"/>
+<path class="edge edge-green" d="M670,201 L686,201 L686,242 L700,242" marker-end="url(#ah-shadow-mapping)"/>
+<path class="edge " d="M456,242 L468,242 L468,275 L480,275" marker-end="url(#ah-shadow-mapping)"/>
+<path class="edge edge-green" d="M670,275 L686,275 L686,242 L700,242" marker-end="url(#ah-shadow-mapping)"/>
+<path class="edge edge-mauve" d="M575,106 L575,176" marker-end="url(#ah-shadow-mapping)"/>
+</svg>

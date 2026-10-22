@@ -1,0 +1,40 @@
+<svg class="dg" viewBox="0 0 820 270" role="img" aria-label="Combat and health data flow" xmlns="http://www.w3.org/2000/svg">
+<title>Combat and health data flow</title>
+<defs><marker id="ah-combat-flow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7f849c"/></marker></defs>
+<rect class="box box-blue" x="10" y="40" width="140" height="56" rx="10"/>
+<text x="80" y="65" text-anchor="middle">Attacker</text>
+<text class="dg-s" x="80" y="82" text-anchor="middle">elemental unit</text>
+<rect class="box " x="175" y="40" width="145" height="56" rx="10"/>
+<text x="247.5" y="65" text-anchor="middle">Find target</text>
+<text class="dg-s" x="247.5" y="82" text-anchor="middle">enemy in range</text>
+<rect class="box " x="345" y="40" width="145" height="56" rx="10"/>
+<text x="417.5" y="65" text-anchor="middle">Attack</text>
+<text class="dg-s" x="417.5" y="82" text-anchor="middle">cooldown-gated</text>
+<rect class="box box-blue" x="515" y="40" width="145" height="56" rx="10"/>
+<text x="587.5" y="65" text-anchor="middle">Health</text>
+<text class="dg-s" x="587.5" y="82" text-anchor="middle">TakeDamage()</text>
+<rect class="box box-peach" x="685" y="40" width="125" height="56" rx="10"/>
+<text x="747.5" y="73" text-anchor="middle">HP ≤ 0 ?</text>
+<path class="edge " d="M150,68 L175,68" marker-end="url(#ah-combat-flow)"/>
+<path class="edge " d="M320,68 L345,68" marker-end="url(#ah-combat-flow)"/>
+<path class="edge " d="M490,68 L515,68" marker-end="url(#ah-combat-flow)"/>
+<path class="edge " d="M660,68 L685,68" marker-end="url(#ah-combat-flow)"/>
+<rect class="box box-mauve" x="685" y="170" width="125" height="56" rx="10"/>
+<text x="747.5" y="195" text-anchor="middle">Death event</text>
+<text class="dg-s" x="747.5" y="212" text-anchor="middle">broadcast</text>
+<path class="edge " d="M747.5,96 L747.5,170" marker-end="url(#ah-combat-flow)"/>
+<text class="dg-s" x="765.5" y="140" text-anchor="middle">yes</text>
+<text class="dg-h" x="560" y="158" text-anchor="start">LISTENERS</text>
+<rect class="box " x="515" y="170" width="145" height="56" rx="10"/>
+<text x="587.5" y="195" text-anchor="middle">Audio cue</text>
+<text class="dg-s" x="587.5" y="212" text-anchor="middle">death / impact SFX</text>
+<rect class="box " x="345" y="170" width="145" height="56" rx="10"/>
+<text x="417.5" y="195" text-anchor="middle">VFX</text>
+<text class="dg-s" x="417.5" y="212" text-anchor="middle">hit + death effects</text>
+<rect class="box " x="175" y="170" width="145" height="56" rx="10"/>
+<text x="247.5" y="195" text-anchor="middle">Game state / UI</text>
+<text class="dg-s" x="247.5" y="212" text-anchor="middle">army + match flow</text>
+<path class="edge " d="M685,198 L660,198" marker-end="url(#ah-combat-flow)"/>
+<path class="edge " d="M515,198 L490,198" marker-end="url(#ah-combat-flow)"/>
+<path class="edge " d="M345,198 L320,198" marker-end="url(#ah-combat-flow)"/>
+</svg>

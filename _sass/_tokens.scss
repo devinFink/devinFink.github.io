@@ -1,0 +1,62 @@
+// Catppuccin Mocha, inlined so the site has no runtime palette dependency.
+$base: #1e1e2e;
+$mantle: #181825;
+$crust: #11111b;
+$surface0: #313244;
+$surface1: #45475a;
+$surface2: #585b70;
+$overlay0: #6c7086;
+$overlay1: #7f849c;
+$subtext0: #a6adc8;
+$subtext1: #bac2de;
+$text: #cdd6f4;
+$blue: #89b4fa;
+$lavender: #b4befe;
+$mauve: #cba6f7;
+$green: #a6e3a1;
+$yellow: #f9e2af;
+$peach: #fab387;
+$teal: #94e2d5;
+$red: #f38ba8;
+
+:root {
+    color-scheme: dark;
+
+    --bg: #{$base};
+    --bg-alt: #{$mantle};
+    --panel: #{$mantle};
+    --panel-2: #{$crust};
+    --line: #{$surface0};
+    --line-strong: #{$surface1};
+
+    --text: #{$text};
+    --text-soft: #{$subtext1};
+    --muted: #{$subtext0};
+    --faint: #{$overlay1};
+
+    --blue: #{$blue};
+    --mauve: #{$mauve};
+    --lavender: #{$lavender};
+    --green: #{$green};
+    --yellow: #{$yellow};
+    --peach: #{$peach};
+    --teal: #{$teal};
+    --red: #{$red};
+
+    --gradient: linear-gradient(100deg, #{$blue} 0%, #{$lavender} 45%, #{$mauve} 100%);
+
+    --font-text: "DM Sans", "Segoe UI", system-ui, sans-serif;
+    --font-code: "DM Mono", ui-monospace, Consolas, monospace;
+
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 18px;
+    --radius-pill: 999px;
+
+    --shadow-md: 0 14px 40px -18px rgba(0, 0, 0, 0.7);
+    --shadow-lg: 0 30px 80px -30px rgba(0, 0, 0, 0.85);
+
+    --ease: cubic-bezier(.2, .7, .2, 1);
+    --container: 1140px;
+    --nav-h: 64px;
+}

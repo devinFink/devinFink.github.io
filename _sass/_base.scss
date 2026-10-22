@@ -1,0 +1,94 @@
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: calc(var(--nav-h) + 24px);
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-text);
+    font-size: 16px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+}
+
+img, video, svg { max-width: 100%; display: block; }
+
+a {
+    color: var(--blue);
+    text-decoration: none;
+    transition: color .15s ease, opacity .15s ease;
+}
+a:hover { color: var(--lavender); }
+
+h1, h2, h3, h4 {
+    color: var(--text);
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    margin: 0;
+}
+h1 { font-size: clamp(34px, 5.5vw, 58px); font-weight: 750; letter-spacing: -0.035em; }
+h2 { font-size: clamp(24px, 3vw, 32px); font-weight: 700; }
+h3 { font-size: 20px; font-weight: 650; }
+
+p { margin: 0 0 1em; }
+
+::selection { background: rgba(137, 180, 250, .3); }
+
+:focus-visible {
+    outline: 2px solid var(--blue);
+    outline-offset: 3px;
+    border-radius: 4px;
+}
+
+.container {
+    width: 100%;
+    max-width: var(--container);
+    margin: 0 auto;
+    padding: 0 24px;
+}
+@media (max-width: 560px) {
+    .container { padding: 0 16px; }
+}
+
+.gradient-text {
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.eyebrow {
+    font-family: var(--font-code);
+    font-size: 12.5px;
+    font-weight: 500;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--blue);
+}
+
+.muted { color: var(--muted); }
+
+.section { padding-top: 88px; padding-bottom: 88px; }
+.section-alt { background: var(--bg-alt); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+
+.section-head {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 32px;
+}
+.section-head h2 { margin-top: 6px; }
+.section-note { font-size: 14px; color: var(--faint); }
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { transition: none !important; animation: none !important; }
+    html { scroll-behavior: auto; }
+}

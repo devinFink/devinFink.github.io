@@ -1,63 +1,68 @@
-﻿<!DOCTYPE html>
-
-<html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Personal website of Devin Fink">
-    <title>Resume | Devin Fink</title>
-    <link rel="stylesheet" href="css/main.css">
-    <script src="https://kit.fontawesome.com/0c2f64f640.js" crossorigin="anonymous"></script>
-
-</head>
-
-<body>
-<h1 class="centertext">Devin Fink</h1>
-<h2 class="subtitletext">Gameplay Engineer/Graphics Engineer</h2>
-<div id="navbar">
-    <a href="/">Games/Projects</a>
-    <a href="/about">About</a>
-    <a href="/resume" class="current">Resume</a>
-</div>
-<h2 id="Education">Education</h2>
-<p>
-    Some relevant coursework from my time studying Computer Science and Game Development include:
-</p>
-<ul>
-    <li>Rendering With Ray Tracing</li>
-    <li>Computer Graphics</li>
-    <li>Interactive Computer Graphics</li>
-    <li>Calculus I, II, and III</li>
-    <li>Linear Algebra</li>
-    <li>Traditional Game Development</li>
-    <li>Alternative Game Development</li>
-</ul>
-<p>
-    Before I graduate in december, I plan to take more classes relating to computer security, architecture, and lower level programming.
-</p>
-<h3>Resume</h3>
-<div class="content">
-    <embed src="images/JulyResume.pdf" width="800px" height="1100px" />
-</div>
-
-<footer class="footer">
-    <span class="footer-name">Devin Fink</span>
-    <div class="footer-links">
-        <a href="mailto:devinfink007@gmail.com">devinfink007@gmail.com</a>
-        <div class="footer-divider"></div>
-        <span class="footer-name" style="font-weight:400; font-size:13px;">(801) 441-9441</span>
+---
+title: Resume
+permalink: /resume
+description: Resume of Devin Fink, gameplay and graphics engineer.
+---
+<section class="page-head">
+  <div class="container">
+    <div class="eyebrow">Resume</div>
+    <h1>Experience at a glance</h1>
+    <p>Shipped gameplay code, from-scratch renderers, and coursework centered on graphics and game development.</p>
+    <div class="hero-actions" style="margin-top:26px">
+      <a class="btn btn-primary" href="{{ site.resume_pdf | relative_url }}" download><i class="fa-solid fa-download"></i> Download PDF</a>
+      <a class="btn btn-ghost" href="mailto:{{ site.email }}"><i class="fa-solid fa-envelope"></i> Get in touch</a>
     </div>
-    <div class="social">
-        <a href="https://www.linkedin.com/in/devin-fink-727450235/" target="_blank" aria-label="LinkedIn">
-            <i class="fab fa-linkedin"></i>
-        </a>
-        <a href="https://github.com/devinFink" target="_blank" aria-label="GitHub">
-            <i class="fab fa-github"></i>
-        </a>
+  </div>
+</section>
+
+<section class="container">
+  <div class="resume-grid">
+    <div class="info-card">
+      <h3><i class="fa-solid fa-rocket"></i> Shipped</h3>
+      <ul>
+        <li><a href="{{ '/clockworksword' | relative_url }}">Clockwork Sword</a>: Steam &amp; Epic</li>
+        <li><a href="{{ '/immunitywars' | relative_url }}">Immunity Wars</a>: Steam</li>
+        <li><a href="{{ '/elementalengagements' | relative_url }}">Elemental Engagements</a>: Steam</li>
+      </ul>
     </div>
-</footer>
+    <div class="info-card">
+      <h3><i class="fa-solid fa-code"></i> Languages &amp; APIs</h3>
+      <p>C++, C#, HLSL, GLSL, GDScript &middot; Unity, Godot, OpenGL, DirectX 12 (in progress)</p>
+    </div>
+    <div class="info-card">
+      <h3><i class="fa-solid fa-graduation-cap"></i> Education</h3>
+      <p>B.S. Computer Science, Game Development emphasis, University of Utah. Graduating in December.</p>
+    </div>
+  </div>
+</section>
 
-</body>
+<section class="container section">
+  <div class="section-head">
+    <div>
+      <div class="eyebrow">Coursework</div>
+      <h2>Relevant classes</h2>
+    </div>
+  </div>
+  <div class="course-grid">
+    <div class="course"><i class="fa-solid fa-sun"></i> Rendering with Ray Tracing</div>
+    <div class="course"><i class="fa-solid fa-cube"></i> Computer Graphics</div>
+    <div class="course"><i class="fa-solid fa-display"></i> Interactive Computer Graphics</div>
+    <div class="course"><i class="fa-solid fa-square-root-variable"></i> Calculus I, II &amp; III</div>
+    <div class="course"><i class="fa-solid fa-table-cells"></i> Linear Algebra</div>
+    <div class="course"><i class="fa-solid fa-gamepad"></i> Traditional Game Development</div>
+    <div class="course"><i class="fa-solid fa-lightbulb"></i> Alternative Game Development</div>
+  </div>
+  <p class="muted" style="margin-top:18px">Before graduating, I'm adding classes in computer security, computer architecture, and lower-level programming.</p>
+</section>
 
-</html>
+<section class="container">
+  <div class="section-head">
+    <div>
+      <div class="eyebrow">Full resume</div>
+      <h2>PDF</h2>
+    </div>
+  </div>
+  <div class="pdf-frame">
+    <embed src="{{ site.resume_pdf | relative_url }}" type="application/pdf">
+  </div>
+</section>

@@ -1,0 +1,79 @@
+---
+layout: default
+---
+{%- assign projects = site.projects | sort: "order" -%}
+{%- assign count = projects | size -%}
+{%- for p in projects -%}{%- if p.url == page.url -%}{%- assign idx = forloop.index0 -%}{%- endif -%}{%- endfor -%}
+{%- assign prev_i = idx | minus: 1 -%}
+{%- assign next_i = idx | plus: 1 -%}
+{%- if prev_i < 0 -%}{%- assign prev_i = count | minus: 1 -%}{%- endif -%}
+{%- if next_i >= count -%}{%- assign next_i = 0 -%}{%- endif -%}
+{%- assign prev = projects[prev_i] -%}
+{%- assign next = projects[next_i] -%}
+
+<article class="case">
+  <header class="case-hero">
+    <div class="case-backdrop" style="background-image:url('{{ page.cover | relative_url }}')" aria-hidden="true"></div>
+    <div class="container case-hero-inner">
+      <a class="crumb" href="{{ '/#work' | relative_url }}"><i class="fa-solid fa-arrow-left"></i> All work</a>
+      <div class="eyebrow">{% if page.category == 'game' %}Shipped Game{% else %}Graphics Project{% endif %} &middot; {{ page.engine }}</div>
+      <h1>{{ page.title }}</h1>
+      <p class="case-tagline">{{ page.tagline }}</p>
+      <div class="tags">{% for t in page.tags %}<span class="pill">{{ t }}</span>{% endfor %}</div>
+      {%- if page.links %}
+      <div class="case-links">
+        {%- for l in page.links %}
+        <a class="btn {% if forloop.first %}btn-primary{% else %}btn-ghost{% endif %}" href="{{ l.url }}" target="_blank" rel="noopener"><i class="{{ l.icon }}"></i> {{ l.label }}</a>
+        {%- endfor %}
+      </div>
+      {%- endif %}
+    </div>
+    <div class="container">
+      <div class="case-media">{% include hero-media.html %}</div>
+    </div>
+  </header>
+
+  {%- if page.stats %}
+  <div class="container">
+    <dl class="stats">
+      {%- for s in page.stats %}
+      <div class="stat"><dt>{{ s.label }}</dt><dd>{{ s.value }}</dd></div>
+      {%- endfor %}
+    </dl>
+  </div>
+  {%- endif %}
+
+  <div class="container case-body">
+    <aside class="case-aside">
+      <div class="aside-sticky">
+        <dl class="spec">
+          <div><dt>Role</dt><dd>{{ page.role }}</dd></div>
+          <div><dt>Team</dt><dd>{% if page.team == 'Solo' %}Solo{% else %}{{ page.team }} people{% endif %}</dd></div>
+          {%- if page.duration %}<div><dt>Timeline</dt><dd>{{ page.duration }}</dd></div>{% endif %}
+          <div><dt>Platforms</dt><dd>{{ page.platforms }}</dd></div>
+          <div><dt>Engine / Language</dt><dd>{{ page.engine }}</dd></div>
+        </dl>
+        <nav class="toc" id="toc" aria-label="On this page" hidden>
+          <div class="toc-title">On this page</div>
+          <ol></ol>
+        </nav>
+      </div>
+    </aside>
+    <div class="case-content prose">
+      {{ content }}
+    </div>
+  </div>
+
+  {% include gallery.html %}
+
+  <nav class="container pager" aria-label="More projects">
+    <a class="pager-link" href="{{ prev.url | relative_url }}">
+      <span class="pager-dir"><i class="fa-solid fa-arrow-left"></i> Previous</span>
+      <span class="pager-title">{{ prev.title }}</span>
+    </a>
+    <a class="pager-link is-next" href="{{ next.url | relative_url }}">
+      <span class="pager-dir">Next <i class="fa-solid fa-arrow-right"></i></span>
+      <span class="pager-title">{{ next.title }}</span>
+    </a>
+  </nav>
+</article>

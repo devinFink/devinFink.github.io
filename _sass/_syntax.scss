@@ -1,0 +1,36 @@
+/* Rouge code highlighting, Catppuccin Mocha */
+.highlighter-rouge { margin: 26px 0; }
+.highlight pre, pre.highlight {
+    margin: 0;
+    padding: 20px 22px;
+    overflow-x: auto;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--line);
+    background: #11111b;
+    font-family: var(--font-code);
+    font-size: 13.5px;
+    line-height: 1.7;
+    color: $text;
+}
+.prose .highlight code { padding: 0; border: 0; background: none; color: inherit; font-size: inherit; }
+
+.highlight {
+    .c, .c1, .cm, .cs, .cp, .ch, .cd { color: $overlay1; font-style: italic; }
+    .k, .kd, .kn, .kp, .kr, .kv { color: $mauve; }
+    .kt { color: $yellow; }
+    .kc { color: $peach; }
+    .o, .ow { color: #89dceb; }
+    .p { color: #9399b2; }
+    .n, .nx { color: $text; }
+    .nf, .fm, .nb, .bp { color: $blue; }
+    .nc, .nn, .ne { color: $yellow; }
+    .na, .nl { color: $teal; }
+    .nv, .vi, .vc, .vg { color: $red; }
+    .nt { color: $mauve; }
+    .s, .s1, .s2, .sb, .sc, .sd, .se, .sh, .si, .sx, .ss { color: $green; }
+    .sr { color: #f5c2e7; }
+    .m, .mi, .mf, .mh, .mo, .il { color: $peach; }
+    .err { color: $red; }
+    .gd { color: $red; }
+    .gi { color: $green; }
+}

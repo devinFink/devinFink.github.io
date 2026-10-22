@@ -1,0 +1,21 @@
+{%- comment -%}
+Before/after slider. Params: before, after, before_label, after_label, caption, todo.
+Both images should be renders of the same scene at the same resolution.
+{%- endcomment -%}
+{%- if include.before and include.after -%}
+<figure class="figure is-wide">
+<div class="compare" style="--pos:50%">
+<img src="{{ include.after | relative_url }}" alt="{{ include.after_label }}">
+<div class="compare-before"><img src="{{ include.before | relative_url }}" alt="{{ include.before_label }}"></div>
+<span class="compare-handle" aria-hidden="true"></span>
+<span class="compare-label is-left">{{ include.before_label }}</span>
+<span class="compare-label is-right">{{ include.after_label }}</span>
+<input type="range" min="0" max="100" value="50" aria-label="Drag to compare {{ include.before_label }} and {{ include.after_label }}">
+</div>
+{%- if include.caption -%}<figcaption>{{ include.caption }}</figcaption>{%- endif -%}
+</figure>
+{%- elsif include.todo -%}
+{%- unless jekyll.environment == "production" -%}
+<figure class="figure todo-slot is-wide"><i class="fa-solid fa-left-right"></i><span>{{ include.todo }}</span></figure>
+{%- endunless -%}
+{%- endif -%}

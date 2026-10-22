@@ -1,0 +1,49 @@
+<svg class="dg" viewBox="0 0 820 350" role="img" aria-label="Status effect system data flow" xmlns="http://www.w3.org/2000/svg">
+<title>Status effect system data flow</title>
+<defs><marker id="ah-status-effects" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7f849c"/></marker></defs>
+<text class="dg-h" x="20" y="32" text-anchor="start">SOURCES</text>
+<rect class="box " x="20" y="48" width="170" height="52" rx="10"/>
+<text x="105" y="71" text-anchor="middle">Weapon hit</text>
+<text class="dg-s" x="105" y="88" text-anchor="middle">element on the blade</text>
+<rect class="box " x="20" y="116" width="170" height="52" rx="10"/>
+<text x="105" y="139" text-anchor="middle">Gear proc</text>
+<text class="dg-s" x="105" y="156" text-anchor="middle">socketed gear triggers</text>
+<rect class="box " x="20" y="184" width="170" height="52" rx="10"/>
+<text x="105" y="207" text-anchor="middle">Enemy attack</text>
+<text class="dg-s" x="105" y="224" text-anchor="middle">applied to the player</text>
+<rect class="box box-mauve" x="20" y="268" width="170" height="56" rx="10"/>
+<text x="105" y="293" text-anchor="middle">Effect definition</text>
+<text class="dg-s" x="105" y="310" text-anchor="middle">designer-tuned data</text>
+<rect class="zone" x="240" y="40" width="330" height="290" rx="14"/>
+<text class="dg-h" x="254" y="60">PER ENTITY · STATUS EFFECT CONTROLLER</text>
+<rect class="box box-blue" x="260" y="72" width="290" height="46" rx="10"/>
+<text x="405" y="100" text-anchor="middle">Apply(effect, source)</text>
+<rect class="box " x="260" y="136" width="290" height="40" rx="10"/>
+<text x="405" y="161" text-anchor="middle">Active effect · ×3 stacks · 2.4s</text>
+<rect class="box " x="260" y="186" width="290" height="40" rx="10"/>
+<text x="405" y="211" text-anchor="middle">Active effect · ×1 stack · 0.8s</text>
+<rect class="box " x="260" y="236" width="290" height="40" rx="10"/>
+<text x="405" y="261" text-anchor="middle">Active effect · ×2 stacks · 5.0s</text>
+<text class="dg-s" x="405" y="306" text-anchor="middle">stacking · duration · tick rate</text>
+<path class="edge edge-blue" d="M190,74 L215,74 L215,95 L260,95" marker-end="url(#ah-status-effects)"/>
+<path class="edge edge-blue" d="M190,142 L215,142 L215,95 L260,95" marker-end="url(#ah-status-effects)"/>
+<path class="edge edge-blue" d="M190,210 L215,210 L215,95 L260,95" marker-end="url(#ah-status-effects)"/>
+<path class="edge edge-mauve" d="M190,296 L240,296" marker-end="url(#ah-status-effects)"/>
+<text class="dg-h" x="620" y="32" text-anchor="start">OUTPUTS</text>
+<rect class="box " x="620" y="48" width="180" height="52" rx="10"/>
+<text x="710" y="71" text-anchor="middle">Stat modifiers</text>
+<text class="dg-s" x="710" y="88" text-anchor="middle">speed, damage, defense</text>
+<rect class="box " x="620" y="116" width="180" height="52" rx="10"/>
+<text x="710" y="139" text-anchor="middle">Damage over time</text>
+<text class="dg-s" x="710" y="156" text-anchor="middle">per-tick damage</text>
+<rect class="box " x="620" y="184" width="180" height="52" rx="10"/>
+<text x="710" y="207" text-anchor="middle">VFX + HUD icons</text>
+<text class="dg-s" x="710" y="224" text-anchor="middle">readable feedback</text>
+<rect class="box box-peach" x="620" y="268" width="180" height="56" rx="10"/>
+<text x="710" y="293" text-anchor="middle">Expire &amp; clean up</text>
+<text class="dg-s" x="710" y="310" text-anchor="middle">remove modifiers</text>
+<path class="edge " d="M570,74 L620,74" marker-end="url(#ah-status-effects)"/>
+<path class="edge " d="M570,142 L620,142" marker-end="url(#ah-status-effects)"/>
+<path class="edge " d="M570,210 L620,210" marker-end="url(#ah-status-effects)"/>
+<path class="edge " d="M570,296 L620,296" marker-end="url(#ah-status-effects)"/>
+</svg>

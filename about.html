@@ -1,67 +1,65 @@
-﻿<!DOCTYPE html>
+---
+title: About
+permalink: /about
+description: About Devin Fink, gameplay and graphics engineer and CS / Game Development student at the University of Utah.
+---
+<section class="page-head">
+  <div class="container">
+    <div class="eyebrow">About</div>
+    <h1>Hi, I'm <span class="gradient-text">Devin</span>.</h1>
+    <p>Gameplay programmer, graphics enthusiast, and lifelong player.</p>
+  </div>
+</section>
 
-<html lang="en">
-
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Personal website of Devin Fink">
-  <title>Home | Devin Fink</title>
-  <link rel="stylesheet" href="css/main.css">
-  <script src="https://kit.fontawesome.com/0c2f64f640.js" crossorigin="anonymous"></script>
-</head>
-
-<body>
-<h1 class="centertext">Devin Fink</h1>
-<h2 class="subtitletext">Gameplay Engineer</h2>
-<div id="navbar">
-  <a href="/">Games/Projects</a>
-  <a href="/about" class="current">About</a>
-  <a href="/resume">Resume</a>
-</div>
-
-<div class="content">
-  <img src="images/profile.jpg" alt="Devin Fink" class="profile-pic">
-  <div class="text-content">
-    <h2 id="welcome">Welcome!</h2>
+<section class="container about-intro">
+  <div class="about-photo">
+    <img src="{{ '/images/about/profile.webp' | relative_url }}" alt="Portrait of Devin Fink">
+  </div>
+  <div class="prose">
     <p>
-      I'm Devin Fink, a student at the University of Utah studying Computer Science with an Emphasis in Game Development.
+      I'm a student at the <strong>University of Utah</strong> studying Computer Science with an emphasis in
+      <strong>Game Development</strong>. I grew up surrounded by every console and game you could imagine, and my
+      father, a game programmer, gave me my love of games.
     </p>
-    <h2 id="about">About Me</h2>
     <p>
-      I grew up surrounded by every console and game you could imagine, instilled with a love of games from my game programmer father.
-      I believe in the power of games to enrich lives, develop relationships, and tell stories, and I want to use my skills to develop
-      the next generation of life-changing experiences. I have experience as both a Gameplay engineer and a QA Engineer, and most recently
-      I have been fascinated with the world of graphics programming.
+      I believe games can enrich lives, build relationships, and tell stories, and I want to help build the next
+      generation of life-changing experiences. I've worked as both a <strong>Gameplay Engineer</strong> and a
+      <strong>QA Engineer</strong>. Lately I've been pulled into <strong>graphics programming</strong>:
+      ray tracing, real-time rendering, and GPU compute.
     </p>
-    <hr>
-    <div class="family-section">
-      <img class="family-photo" src="images/familyphoto.jpg" alt="My family">
+
+    <h2>Experience</h2>
+    <ol class="timeline">
+      <li>
+        <span class="when">Clockwork Sword &middot; Unity / C#</span>
+        <h3>Gameplay Engineer</h3>
+        <p>Core engineer on a 37-person team. Built the status-effect and gear systems and integrated UI art and animation, through to release on Steam and the Epic Games Store.</p>
+      </li>
+      <li>
+        <span class="when">{% include todo.html text="Company / project and dates" %}</span>
+        <h3>QA Engineer</h3>
+        <p>{% include todo.html text="One or two lines on what you tested, the tools you used, and what you took from it into engineering." %}</p>
+      </li>
+      <li>
+        <span class="when">University of Utah &middot; Graduating December</span>
+        <h3>B.S. Computer Science, Game Development emphasis</h3>
+        <p>Coursework in ray tracing, interactive computer graphics, linear algebra, and traditional and alternative game development, plus three team-built games shipped on Steam.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="container section">
+  <div class="family">
+    <img src="{{ '/images/about/family.webp' | relative_url }}" alt="Devin with his family">
+    <div class="family-body">
+      <div class="eyebrow">Off the clock</div>
+      <h2>When I'm not coding</h2>
       <p>
-        In my free time, I love to spend evenings playing couch co-op games with my wife or spending time online with friends.
-        I also DM a multi-year campaign of Dungeons and Dragons, or you may find me painting miniatures next to my wife as she rebinds books and our puppy sleeps nearby.
+        I love spending evenings playing couch co-op games with my wife or hanging out online with friends.
+        I also DM a multi-year Dungeons &amp; Dragons campaign. Otherwise you'll probably find me painting
+        miniatures next to my wife while she rebinds books and our puppy sleeps nearby.
       </p>
     </div>
   </div>
-</div>
-
-<footer class="footer">
-  <span class="footer-name">Devin Fink</span>
-  <div class="footer-links">
-    <a href="mailto:devinfink007@gmail.com">devinfink007@gmail.com</a>
-    <div class="footer-divider"></div>
-    <span class="footer-name" style="font-weight:400; font-size:13px;">(801) 441-9441</span>
-  </div>
-  <div class="social">
-    <a href="https://www.linkedin.com/in/devin-fink-727450235/" target="_blank" aria-label="LinkedIn">
-      <i class="fab fa-linkedin"></i>
-    </a>
-    <a href="https://github.com/devinFink" target="_blank" aria-label="GitHub">
-      <i class="fab fa-github"></i>
-    </a>
-  </div>
-</footer>
-
-</body>
-
-</html>
+</section>

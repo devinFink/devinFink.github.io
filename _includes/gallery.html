@@ -1,0 +1,21 @@
+{%- if page.gallery -%}
+<section class="container gallery-section" id="gallery">
+<div class="section-head">
+<h2>Gallery</h2>
+<span class="section-note">Click any image to enlarge</span>
+</div>
+<div class="gallery">
+{%- for g in page.gallery -%}
+{%- if g.src %}
+<a class="gallery-item zoomable{% if g.wide %} is-wide{% endif %}" href="{{ g.src | relative_url }}" data-caption="{{ g.caption | escape }}">
+<img src="{{ g.thumb | default: g.src | relative_url }}" alt="{{ g.caption | escape }}" loading="lazy">
+</a>
+{%- elsif g.todo -%}
+{%- unless jekyll.environment == "production" %}
+<div class="gallery-item todo-slot"><i class="fa-solid fa-camera"></i><span>{{ g.todo }}</span></div>
+{%- endunless -%}
+{%- endif -%}
+{%- endfor %}
+</div>
+</section>
+{%- endif -%}
