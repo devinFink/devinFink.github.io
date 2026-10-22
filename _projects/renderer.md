@@ -18,11 +18,6 @@ hero:
   type: image
   src: /images/renderer/environment-map.webp
   caption: A reflective teapot with an environment cube map
-stats:
-  - { value: "C++", label: "and modern OpenGL" }
-  - { value: "2-pass", label: "shadow mapping" }
-  - { value: "GLSL", label: "4 shader stages" }
-  - { value: "GLFW", label: "windowing + input" }
 gallery:
   - { src: /images/renderer/environment-map.webp, thumb: /images/renderer/environment-map-sm.webp, caption: "Environment mapping: reflections sampled from a cube map" }
   - { src: /images/renderer/shadow-map.webp, thumb: /images/renderer/shadow-map-sm.webp, caption: "Shadow mapping: the teapot casting onto the ground plane" }
@@ -35,10 +30,10 @@ gallery:
 This renderer is the real-time counterpart to my [ray tracer](/rayTracer). Instead of tracing rays, it uses the **rasterization pipeline** every game engine relies on each frame. It draws mesh scenes in 3D with **shadow mapping** for shadows, **cube-map environment mapping** for reflections, and custom **geometry and tessellation shaders**. It's written in **C++** on **OpenGL**, with **GLFW** for the window and input.
 
 <div class="highlights">
-<div class="highlight"><i class="fa-solid fa-moon"></i><strong>Shadow mapping</strong><span>A depth pass from the light, then a depth comparison per fragment.</span></div>
-<div class="highlight"><i class="fa-solid fa-globe"></i><strong>Environment mapping</strong><span>Reflections sampled from a cube map by reflecting the view vector.</span></div>
-<div class="highlight"><i class="fa-solid fa-layer-group"></i><strong>Programmable pipeline</strong><span>Vertex, fragment, geometry, and tessellation shaders in GLSL.</span></div>
-<div class="highlight"><i class="fa-solid fa-cubes"></i><strong>Engine plumbing</strong><span>Mesh loading, transforms, textures, and a render loop, all in C++.</span></div>
+<div class="highlight"><strong>Shadow mapping</strong><span>A depth pass from the light, then a depth comparison per fragment.</span></div>
+<div class="highlight"><strong>Environment mapping</strong><span>Reflections sampled from a cube map by reflecting the view vector.</span></div>
+<div class="highlight"><strong>Programmable pipeline</strong><span>Vertex, fragment, geometry, and tessellation shaders in GLSL.</span></div>
+<div class="highlight"><strong>Engine plumbing</strong><span>Mesh loading, transforms, textures, and a render loop, all in C++.</span></div>
 </div>
 
 ## Architecture

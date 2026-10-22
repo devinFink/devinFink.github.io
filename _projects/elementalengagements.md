@@ -19,15 +19,9 @@ hero:
   type: youtube
   id: Rc-zcAMk64U
   poster: /images/elementalengagements/shot-3.webp
-  label: Watch the release trailer
 links:
   - { label: View on Steam, url: "https://store.steampowered.com/app/2748400/", icon: fab fa-steam }
   - { label: Trailer, url: "https://www.youtube.com/watch?v=Rc-zcAMk64U", icon: fab fa-youtube }
-stats:
-  - { value: "6", label: "person team" }
-  - { value: "4 mo", label: "production" }
-  - { value: "1v1", label: "split-screen versus" }
-  - { value: "100%", label: "of audio implemented" }
 gallery:
   - { src: /images/elementalengagements/shot-3.webp, thumb: /images/elementalengagements/shot-3-sm.webp, caption: "Fire elementals clash in a split-screen match" }
   - { src: /images/elementalengagements/shot-1.webp, thumb: /images/elementalengagements/shot-1-sm.webp, caption: "Both players building up their armies" }
@@ -48,10 +42,10 @@ It was built by a **team of six** in **four months** in **Unity**, and released 
 I was a programmer and the sound designer. I built the systems that decide who wins a fight, plus the feedback that tells both players what's happening.
 
 <div class="highlights">
-<div class="highlight"><i class="fa-solid fa-khanda"></i><strong>Combat &amp; health</strong><span>Attack resolution, damage, and health and death handling that every unit in the game runs on.</span></div>
-<div class="highlight"><i class="fa-solid fa-route"></i><strong>Pathing visuals</strong><span>Code-driven effects that show where units are heading, so orders read clearly in real time.</span></div>
-<div class="highlight"><i class="fa-solid fa-volume-high"></i><strong>Audio systems</strong><span>Implemented all of the game's SFX and music playback.</span></div>
-<div class="highlight"><i class="fa-solid fa-bug"></i><strong>Bug fixing</strong><span>Fixed bugs across gameplay, balance, and stability throughout production.</span></div>
+<div class="highlight"><strong>Combat &amp; health</strong><span>Attack resolution, damage, and health and death handling that every unit in the game runs on.</span></div>
+<div class="highlight"><strong>Pathing visuals</strong><span>Code-driven effects that show where units are heading, so orders read clearly in real time.</span></div>
+<div class="highlight"><strong>Audio systems</strong><span>Implemented all of the game's SFX and music playback.</span></div>
+<div class="highlight"><strong>Bug fixing</strong><span>Fixed bugs across gameplay, balance, and stability throughout production.</span></div>
 </div>
 
 ## Systems Deep Dive

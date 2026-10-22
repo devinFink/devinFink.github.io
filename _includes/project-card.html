@@ -1,22 +1,14 @@
 {%- assign p = include.project -%}
-<a class="card" href="{{ p.url | relative_url }}" data-category="{{ p.category }}"{% if p.thumb_video %} data-video{% endif %}>
-<div class="card-media">
+<a class="tile" href="{{ p.url | relative_url }}"{% if p.thumb_video %} data-video{% endif %}>
+<div class="tile-media">
 <img src="{{ p.thumb | relative_url }}" alt="{{ p.title }}" loading="lazy">
 {%- if p.thumb_video %}
-<video class="card-alt" src="{{ p.thumb_video | relative_url }}" muted loop playsinline preload="none"></video>
+<video class="tile-alt" src="{{ p.thumb_video | relative_url }}" muted loop playsinline preload="none"></video>
 {%- elsif p.thumb_alt %}
-<img class="card-alt" src="{{ p.thumb_alt | relative_url }}" alt="" loading="lazy">
+<img class="tile-alt" src="{{ p.thumb_alt | relative_url }}" alt="" loading="lazy">
 {%- endif %}
-<span class="card-badge card-badge-{{ p.category }}">{% if p.category == 'game' %}Shipped Game{% else %}Graphics{% endif %}</span>
 </div>
-<div class="card-body">
-<div class="card-kicker">{{ p.engine }}</div>
-<h3 class="card-title">{{ p.title }}</h3>
-<p class="card-desc">{{ p.summary }}</p>
-<div class="tags">{% for t in p.tags limit: 4 %}<span class="pill">{{ t }}</span>{% endfor %}</div>
-</div>
-<div class="card-foot">
-<span>{{ p.role }}{% if p.team %} &middot; {% if p.team == 'Solo' %}Solo{% else %}Team of {{ p.team }}{% endif %}{% endif %}</span>
-<span class="card-cta">Case study <i class="fa-solid fa-arrow-right"></i></span>
-</div>
+<h3 class="tile-title">{{ p.title }}</h3>
+<p class="tile-desc">{{ p.summary }}</p>
+<p class="tile-meta">{{ p.engine }} &middot; {% if p.team == 'Solo' %}Solo{% else %}Team of {{ p.team }}{% endif %}</p>
 </a>

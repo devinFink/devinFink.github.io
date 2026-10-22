@@ -19,11 +19,6 @@ hero:
   type: image
   src: /images/raytracer/scene.webp
   caption: Reflective and refractive spheres lit by an environment
-stats:
-  - { value: "C++", label: "from scratch" }
-  - { value: "BVH", label: "acceleration structure" }
-  - { value: "2-pass", label: "photon mapping" }
-  - { value: "Multi", label: "threaded rendering" }
 gallery:
   - { src: /images/raytracer/scene.webp, thumb: /images/raytracer/scene-sm.webp, caption: "Reflection and refraction with environment lighting" }
   - { src: /images/raytracer/glossiness.webp, thumb: /images/raytracer/glossiness-sm.webp, caption: "Glossy reflections and multi-sampled soft shadows" }
@@ -38,10 +33,10 @@ gallery:
 I built a CPU ray tracer in C++ **from scratch**. It grew from basic shading into a physically inspired renderer with **Monte-Carlo global illumination** and **photon mapping**. Along the way, performance work became as important as the lighting itself: a **BVH** and a **multithreaded** render loop are what keep it usable.
 
 <div class="highlights">
-<div class="highlight"><i class="fa-solid fa-sun"></i><strong>Light transport</strong><span>Monte-Carlo GI for indirect light and color bleeding, and photon mapping for caustics.</span></div>
-<div class="highlight"><i class="fa-solid fa-gauge-high"></i><strong>Performance</strong><span>Bounding volume hierarchy for intersection tests, and work split across CPU threads.</span></div>
-<div class="highlight"><i class="fa-solid fa-circle-half-stroke"></i><strong>Shading</strong><span>Blinn-Phong, reflection, refraction, textures, soft shadows, anti-aliasing, and depth of field.</span></div>
-<div class="highlight"><i class="fa-solid fa-square-root-variable"></i><strong>The math</strong><span>Transforms, ray-object intersection, sampling, and light transport, implemented from first principles.</span></div>
+<div class="highlight"><strong>Light transport</strong><span>Monte-Carlo GI for indirect light and color bleeding, and photon mapping for caustics.</span></div>
+<div class="highlight"><strong>Performance</strong><span>Bounding volume hierarchy for intersection tests, and work split across CPU threads.</span></div>
+<div class="highlight"><strong>Shading</strong><span>Blinn-Phong, reflection, refraction, textures, soft shadows, anti-aliasing, and depth of field.</span></div>
+<div class="highlight"><strong>The math</strong><span>Transforms, ray-object intersection, sampling, and light transport, implemented from first principles.</span></div>
 </div>
 
 ## Architecture

@@ -19,15 +19,9 @@ hero:
   type: youtube
   id: PFV41kASZh0
   poster: /images/immunitywars/shot-1.webp
-  label: Watch the release trailer
 links:
   - { label: View on Steam, url: "https://store.steampowered.com/app/2957280/", icon: fab fa-steam }
   - { label: Trailer, url: "https://www.youtube.com/watch?v=PFV41kASZh0", icon: fab fa-youtube }
-stats:
-  - { value: "5", label: "person team" }
-  - { value: "4 mo", label: "production" }
-  - { value: "3", label: "core systems built" }
-  - { value: "OST", label: "original soundtrack" }
 gallery:
   - { src: /images/immunitywars/shot-1.webp, thumb: /images/immunitywars/shot-1-sm.webp, caption: "Planning a turn: movement range and objectives" }
   - { src: /images/immunitywars/shot-3.webp, thumb: /images/immunitywars/shot-3-sm.webp, caption: "Immune cells engaging an infection" }
@@ -48,10 +42,10 @@ It was built by a **team of five** in **four months** using **Godot**, and relea
 I was one of the programmers and the team's sound designer. I built the systems that every player action runs through, then gave the game its sound.
 
 <div class="highlights">
-<div class="highlight"><i class="fa-solid fa-arrows-rotate"></i><strong>Turn system</strong><span>The state machine that drives each round, from the player's turn through the pathogens' turn to the objective checks.</span></div>
-<div class="highlight"><i class="fa-solid fa-wand-magic-sparkles"></i><strong>Ability framework</strong><span>Data-driven unit actions with targeting and resolution, so new abilities were easy to add.</span></div>
-<div class="highlight"><i class="fa-solid fa-hand-pointer"></i><strong>Selection</strong><span>Unit and hex selection with clear highlighting of valid moves and targets.</span></div>
-<div class="highlight"><i class="fa-solid fa-music"></i><strong>Music, SFX &amp; VFX</strong><span>Composed the soundtrack, produced the sound effects, and built the particle effects for the cells.</span></div>
+<div class="highlight"><strong>Turn system</strong><span>The state machine that drives each round, from the player's turn through the pathogens' turn to the objective checks.</span></div>
+<div class="highlight"><strong>Ability framework</strong><span>Data-driven unit actions with targeting and resolution, so new abilities were easy to add.</span></div>
+<div class="highlight"><strong>Selection</strong><span>Unit and hex selection with clear highlighting of valid moves and targets.</span></div>
+<div class="highlight"><strong>Music, SFX &amp; VFX</strong><span>Composed the soundtrack, produced the sound effects, and built the particle effects for the cells.</span></div>
 </div>
 
 ## Systems Deep Dive

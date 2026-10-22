@@ -3,133 +3,41 @@ layout: default
 body_class: page-home
 ---
 {%- assign projects = site.projects | sort: "order" -%}
-{%- assign featured = projects | where: "featured", true | first -%}
+{%- assign games = projects | where: "category", "game" -%}
+{%- assign graphics = projects | where: "category", "graphics" -%}
 
-<section class="home-hero">
-  <div class="container hero-grid">
-    <div class="hero-copy">
-      <div class="status">
-        <img src="{{ '/images/about/profile-sm.webp' | relative_url }}" alt="">
-        <span class="status-dot" aria-hidden="true"></span>
-        Open to gameplay &amp; graphics roles
-      </div>
-      <h1>I build <span class="gradient-text">gameplay systems</span> and <span class="gradient-text">real-time graphics</span>.</h1>
-      <p class="hero-lede">
-        I'm Devin, a Computer Science student at the University of Utah with an emphasis in Game Development.
-        I've shipped three games on Steam as a gameplay programmer, and I write rendering code in C++ and HLSL.
-      </p>
-      <div class="hero-actions">
-        <a class="btn btn-primary" href="#work"><i class="fa-solid fa-gamepad"></i> View my work</a>
-        <a class="btn btn-ghost" href="{{ '/resume' | relative_url }}"><i class="fa-solid fa-file-lines"></i> Resume</a>
-      </div>
-      <dl class="hero-stats">
-        <div><dt>games shipped on Steam</dt><dd>3</dd></div>
-        <div><dt>person team on Clockwork Sword</dt><dd>37</dd></div>
-        <div><dt>renderers written from scratch</dt><dd>2</dd></div>
-      </dl>
-    </div>
-
-    <div class="mosaic" aria-label="Project highlights">
-      <a href="{{ '/clockworksword' | relative_url }}"><img src="{{ '/images/clockworksword/shot-7-sm.webp' | relative_url }}" alt="Clockwork Sword combat with area-of-effect status fields"><span>Clockwork Sword</span></a>
-      <a href="{{ '/rayTracer' | relative_url }}"><img src="{{ '/images/raytracer/scene-sm.webp' | relative_url }}" alt="Ray-traced scene with reflective and refractive spheres"><span>Ray Tracer</span></a>
-      <a href="{{ '/physarumSimulator' | relative_url }}"><img src="{{ '/images/physarum/volume-sm.webp' | relative_url }}" alt="Volumetric render of the 3D physarum simulation"><span>Physarum</span></a>
-    </div>
-  </div>
+<section class="intro container">
+  <img class="intro-photo" src="{{ '/images/about/profile-sm.webp' | relative_url }}" alt="Portrait of Devin Fink">
+  <h1>Devin Fink</h1>
+  <p class="intro-role">Gameplay &amp; Graphics Engineer</p>
+  <p class="intro-bio">
+    Computer Science student at the University of Utah, emphasis in Game Development.
+    I've shipped three games on Steam as a gameplay programmer and write rendering code in C++ and HLSL.
+  </p>
+  <nav class="intro-links" aria-label="Contact">
+    <a href="{{ '/resume' | relative_url }}">Resume</a>
+    <a href="mailto:{{ site.email }}">Email</a>
+    <a href="{{ site.github }}" target="_blank" rel="noopener">GitHub</a>
+    <a href="{{ site.linkedin }}" target="_blank" rel="noopener">LinkedIn</a>
+  </nav>
 </section>
 
-{%- if featured %}
-<section class="container" aria-labelledby="featured-title">
-  <div class="section-head">
-    <div>
-      <div class="eyebrow">Featured project</div>
-      <h2 id="featured-title">Latest release</h2>
-    </div>
+<section class="container work" id="work">
+  <h2 class="section-title">Games</h2>
+  <div class="work-grid">
+    {%- for p in games %}
+    {% include project-card.html project=p %}
+    {%- endfor %}
   </div>
-  <a class="featured" href="{{ featured.url | relative_url }}">
-    <div class="featured-media">
-      <video src="{{ featured.thumb_video | relative_url }}" poster="{{ featured.cover | relative_url }}" autoplay muted loop playsinline preload="metadata" aria-hidden="true"></video>
-    </div>
-    <div class="featured-body">
-      <div class="eyebrow">{{ featured.platforms }}</div>
-      <h3>{{ featured.title }}</h3>
-      <p>{{ featured.summary }}</p>
-      <ul>
-        {%- for h in featured.featured_points %}
-        <li>{{ h }}</li>
-        {%- endfor %}
-      </ul>
-      <div class="tags">{% for t in featured.tags limit: 4 %}<span class="pill">{{ t }}</span>{% endfor %}</div>
-      <span class="card-cta">Read the case study <i class="fa-solid fa-arrow-right"></i></span>
-    </div>
-  </a>
-</section>
-{%- endif %}
 
-<section class="section" id="work" aria-labelledby="work-title">
-  <div class="container">
-    <div class="section-head">
-      <div>
-        <div class="eyebrow">Selected work</div>
-        <h2 id="work-title">Games &amp; projects</h2>
-      </div>
-      <div class="filters" role="group" aria-label="Filter projects">
-        <button class="filter is-active" data-filter="all" aria-pressed="true">All</button>
-        <button class="filter" data-filter="game" aria-pressed="false">Games</button>
-        <button class="filter" data-filter="graphics" aria-pressed="false">Graphics</button>
-      </div>
-    </div>
-    <div class="card-grid">
-      {%- for p in projects %}
-      {% include project-card.html project=p %}
-      {%- endfor %}
-      <div class="card card-wip" data-category="graphics">
-        <div class="card-media">
-          <i class="fa-solid fa-microchip wip-icon" aria-hidden="true"></i>
-          <span class="card-badge card-badge-wip">In Progress</span>
-        </div>
-        <div class="card-body">
-          <div class="card-kicker">DirectX 12 / C++</div>
-          <h3 class="card-title">DX12 Renderer &amp; GPU Particles</h3>
-          <p class="card-desc">A DirectX 12 renderer and GPU particle system, built while working through Frank Luna's <em>Introduction to 3D Game Programming with DirectX 12</em>. Targeting the end of 2026.</p>
-          <div class="tags"><span class="pill">C++</span><span class="pill">DirectX 12</span><span class="pill">HLSL</span></div>
-        </div>
-        <div class="card-foot"><span>Solo</span><span>Coming soon</span></div>
-      </div>
-    </div>
+  <h2 class="section-title">Graphics</h2>
+  <div class="work-grid">
+    {%- for p in graphics %}
+    {% include project-card.html project=p %}
+    {%- endfor %}
   </div>
-</section>
-
-<section class="section section-alt" aria-labelledby="skills-title">
-  <div class="container">
-    <div class="section-head">
-      <div>
-        <div class="eyebrow">Toolbox</div>
-        <h2 id="skills-title">What I work with</h2>
-      </div>
-    </div>
-    <div class="skills">
-      <div class="skill-group">
-        <h3><i class="fa-solid fa-code"></i> Languages</h3>
-        <div class="tags">
-          <span class="pill">C++</span><span class="pill">C#</span><span class="pill">HLSL</span>
-          <span class="pill">GLSL</span><span class="pill">GDScript</span>
-        </div>
-      </div>
-      <div class="skill-group">
-        <h3><i class="fa-solid fa-cube"></i> Engines &amp; APIs</h3>
-        <div class="tags">
-          <span class="pill">Unity</span><span class="pill">Godot</span><span class="pill">OpenGL</span>
-          <span class="pill">GLFW</span><span class="pill">DirectX 12</span><span class="pill">Compute shaders</span>
-        </div>
-      </div>
-      <div class="skill-group">
-        <h3><i class="fa-solid fa-diagram-project"></i> Focus areas</h3>
-        <div class="tags">
-          <span class="pill">Gameplay systems</span><span class="pill">Combat &amp; status effects</span>
-          <span class="pill">Ray tracing &amp; GI</span><span class="pill">Real-time rendering</span>
-          <span class="pill">Game audio</span><span class="pill">Git</span>
-        </div>
-      </div>
-    </div>
-  </div>
+  <p class="work-note">
+    Currently building a DirectX 12 renderer and GPU particle system, working through Frank Luna's
+    <em>Introduction to 3D Game Programming with DirectX 12</em>.
+  </p>
 </section>

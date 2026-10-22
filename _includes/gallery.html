@@ -1,9 +1,6 @@
 {%- if page.gallery -%}
 <section class="container gallery-section" id="gallery">
-<div class="section-head">
-<h2>Gallery</h2>
-<span class="section-note">Click any image to enlarge</span>
-</div>
+<h2 class="section-title">Gallery</h2>
 <div class="gallery">
 {%- for g in page.gallery -%}
 {%- if g.src %}

@@ -3,66 +3,44 @@ title: Resume
 permalink: /resume
 description: Resume of Devin Fink, gameplay and graphics engineer.
 ---
-<section class="page-head">
-  <div class="container">
-    <div class="eyebrow">Resume</div>
-    <h1>Experience at a glance</h1>
-    <p>Shipped gameplay code, from-scratch renderers, and coursework centered on graphics and game development.</p>
-    <div class="hero-actions" style="margin-top:26px">
-      <a class="btn btn-primary" href="{{ site.resume_pdf | relative_url }}" download><i class="fa-solid fa-download"></i> Download PDF</a>
-      <a class="btn btn-ghost" href="mailto:{{ site.email }}"><i class="fa-solid fa-envelope"></i> Get in touch</a>
-    </div>
+<div class="container page">
+  <div class="page-head">
+    <h1 class="page-title">Resume</h1>
+    <a class="btn" href="{{ site.resume_pdf | relative_url }}" download><i class="fa-solid fa-download"></i> Download PDF</a>
   </div>
-</section>
 
-<section class="container">
-  <div class="resume-grid">
-    <div class="info-card">
-      <h3><i class="fa-solid fa-rocket"></i> Shipped</h3>
+  <div class="resume-summary">
+    <div>
+      <h2>Shipped</h2>
       <ul>
-        <li><a href="{{ '/clockworksword' | relative_url }}">Clockwork Sword</a>: Steam &amp; Epic</li>
+        <li><a href="{{ '/clockworksword' | relative_url }}">Clockwork Sword</a>: Steam and Epic</li>
         <li><a href="{{ '/immunitywars' | relative_url }}">Immunity Wars</a>: Steam</li>
         <li><a href="{{ '/elementalengagements' | relative_url }}">Elemental Engagements</a>: Steam</li>
       </ul>
     </div>
-    <div class="info-card">
-      <h3><i class="fa-solid fa-code"></i> Languages &amp; APIs</h3>
-      <p>C++, C#, HLSL, GLSL, GDScript &middot; Unity, Godot, OpenGL, DirectX 12 (in progress)</p>
-    </div>
-    <div class="info-card">
-      <h3><i class="fa-solid fa-graduation-cap"></i> Education</h3>
-      <p>B.S. Computer Science, Game Development emphasis, University of Utah. Graduating in December.</p>
-    </div>
-  </div>
-</section>
-
-<section class="container section">
-  <div class="section-head">
     <div>
-      <div class="eyebrow">Coursework</div>
-      <h2>Relevant classes</h2>
+      <h2>Languages &amp; APIs</h2>
+      <p>C++, C#, HLSL, GLSL, GDScript. Unity, Godot, OpenGL, DirectX 12 (learning).</p>
     </div>
-  </div>
-  <div class="course-grid">
-    <div class="course"><i class="fa-solid fa-sun"></i> Rendering with Ray Tracing</div>
-    <div class="course"><i class="fa-solid fa-cube"></i> Computer Graphics</div>
-    <div class="course"><i class="fa-solid fa-display"></i> Interactive Computer Graphics</div>
-    <div class="course"><i class="fa-solid fa-square-root-variable"></i> Calculus I, II &amp; III</div>
-    <div class="course"><i class="fa-solid fa-table-cells"></i> Linear Algebra</div>
-    <div class="course"><i class="fa-solid fa-gamepad"></i> Traditional Game Development</div>
-    <div class="course"><i class="fa-solid fa-lightbulb"></i> Alternative Game Development</div>
-  </div>
-  <p class="muted" style="margin-top:18px">Before graduating, I'm adding classes in computer security, computer architecture, and lower-level programming.</p>
-</section>
-
-<section class="container">
-  <div class="section-head">
     <div>
-      <div class="eyebrow">Full resume</div>
-      <h2>PDF</h2>
+      <h2>Education</h2>
+      <p>B.S. Computer Science, Game Development emphasis. University of Utah, graduating in December.</p>
     </div>
   </div>
+
+  <h2 class="section-title">Relevant coursework</h2>
+  <ul class="courses">
+    <li>Rendering with Ray Tracing</li>
+    <li>Computer Graphics</li>
+    <li>Interactive Computer Graphics</li>
+    <li>Calculus I, II &amp; III</li>
+    <li>Linear Algebra</li>
+    <li>Traditional Game Development</li>
+    <li>Alternative Game Development</li>
+  </ul>
+  <p class="muted">Before graduating, I'm adding classes in computer security, computer architecture, and lower-level programming.</p>
+
   <div class="pdf-frame">
     <embed src="{{ site.resume_pdf | relative_url }}" type="application/pdf">
   </div>
-</section>
+</div>

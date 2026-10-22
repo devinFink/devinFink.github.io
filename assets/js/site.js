@@ -13,25 +13,12 @@
         window.addEventListener('scroll', onScroll, { passive: true });
     }
 
-    // Home: filter project cards by category.
-    const filters = $$('.filter');
-    filters.forEach(btn => btn.addEventListener('click', () => {
-        const f = btn.dataset.filter;
-        filters.forEach(b => {
-            b.classList.toggle('is-active', b === btn);
-            b.setAttribute('aria-pressed', b === btn);
-        });
-        $$('.card-grid .card').forEach(card => {
-            card.classList.toggle('is-hidden', f !== 'all' && card.dataset.category !== f);
-        });
-    }));
-
-    // Cards with a preview clip play it on hover.
-    $$('.card[data-video]').forEach(card => {
-        const video = $('video', card);
+    // Project tiles with a preview clip play it on hover.
+    $$('.tile[data-video]').forEach(tile => {
+        const video = $('video', tile);
         if (!video) return;
-        card.addEventListener('mouseenter', () => { video.play().catch(() => {}); });
-        card.addEventListener('mouseleave', () => { video.pause(); });
+        tile.addEventListener('mouseenter', () => { video.play().catch(() => {}); });
+        tile.addEventListener('mouseleave', () => { video.pause(); });
     });
 
     // YouTube embeds load only when clicked.

@@ -3,63 +3,62 @@ title: About
 permalink: /about
 description: About Devin Fink, gameplay and graphics engineer and CS / Game Development student at the University of Utah.
 ---
-<section class="page-head">
-  <div class="container">
-    <div class="eyebrow">About</div>
-    <h1>Hi, I'm <span class="gradient-text">Devin</span>.</h1>
-    <p>Gameplay programmer, graphics enthusiast, and lifelong player.</p>
-  </div>
-</section>
+<div class="container page">
+  <h1 class="page-title">About</h1>
 
-<section class="container about-intro">
-  <div class="about-photo">
-    <img src="{{ '/images/about/profile.webp' | relative_url }}" alt="Portrait of Devin Fink">
-  </div>
-  <div class="prose">
-    <p>
-      I'm a student at the <strong>University of Utah</strong> studying Computer Science with an emphasis in
-      <strong>Game Development</strong>. I grew up surrounded by every console and game you could imagine, and my
-      father, a game programmer, gave me my love of games.
-    </p>
-    <p>
-      I believe games can enrich lives, build relationships, and tell stories, and I want to help build the next
-      generation of life-changing experiences. I've worked as both a <strong>Gameplay Engineer</strong> and a
-      <strong>QA Engineer</strong>. Lately I've been pulled into <strong>graphics programming</strong>:
-      ray tracing, real-time rendering, and GPU compute.
-    </p>
+  <section class="about-intro">
+    <div class="about-photo">
+      <img src="{{ '/images/about/profile.webp' | relative_url }}" alt="Portrait of Devin Fink">
+    </div>
+    <div class="prose">
+      <p>
+        I'm a student at the <strong>University of Utah</strong> studying Computer Science with an emphasis in
+        <strong>Game Development</strong>. I grew up surrounded by every console and game you could imagine, and my
+        father, a game programmer, gave me my love of games.
+      </p>
+      <p>
+        I believe games can enrich lives, build relationships, and tell stories, and I want to help build the next
+        generation of life-changing experiences. I've worked as both a <strong>Gameplay Engineer</strong> and a
+        <strong>QA Engineer</strong>. Lately I've been pulled into <strong>graphics programming</strong>:
+        ray tracing, real-time rendering, and GPU compute.
+      </p>
 
-    <h2>Experience</h2>
-    <ol class="timeline">
-      <li>
-        <span class="when">Clockwork Sword &middot; Unity / C#</span>
-        <h3>Gameplay Engineer</h3>
-        <p>Core engineer on a 37-person team. Built the status-effect and gear systems and integrated UI art and animation, through to release on Steam and the Epic Games Store.</p>
-      </li>
-      <li>
-        <span class="when">{% include todo.html text="Company / project and dates" %}</span>
-        <h3>QA Engineer</h3>
-        <p>{% include todo.html text="One or two lines on what you tested, the tools you used, and what you took from it into engineering." %}</p>
-      </li>
-      <li>
-        <span class="when">University of Utah &middot; Graduating December</span>
-        <h3>B.S. Computer Science, Game Development emphasis</h3>
-        <p>Coursework in ray tracing, interactive computer graphics, linear algebra, and traditional and alternative game development, plus three team-built games shipped on Steam.</p>
-      </li>
-    </ol>
-  </div>
-</section>
+      <h2>Experience</h2>
+      <ol class="timeline">
+        <li>
+          <h3>Gameplay Engineer</h3>
+          <span class="when">Clockwork Sword &middot; Unity / C#</span>
+          <p>Core engineer on a 37-person team. Built the status-effect and gear systems and integrated UI art and animation, through to release on Steam and the Epic Games Store.</p>
+        </li>
+        <li>
+          <h3>QA Engineer</h3>
+          <span class="when">{% include todo.html text="Company / project and dates" %}</span>
+          <p>{% include todo.html text="One or two lines on what you tested, the tools you used, and what you took from it into engineering." %}</p>
+        </li>
+        <li>
+          <h3>B.S. Computer Science, Game Development emphasis</h3>
+          <span class="when">University of Utah &middot; Graduating December</span>
+          <p>Coursework in ray tracing, interactive computer graphics, linear algebra, and traditional and alternative game development, plus three team-built games shipped on Steam.</p>
+        </li>
+      </ol>
 
-<section class="container section">
-  <div class="family">
-    <img src="{{ '/images/about/family.webp' | relative_url }}" alt="Devin with his family">
-    <div class="family-body">
-      <div class="eyebrow">Off the clock</div>
-      <h2>When I'm not coding</h2>
+      <h2>Skills</h2>
+      <dl class="skills">
+        <div><dt>Languages</dt><dd>C++, C#, HLSL, GLSL, GDScript</dd></div>
+        <div><dt>Engines &amp; APIs</dt><dd>Unity, Godot, OpenGL, GLFW, DirectX 12 (learning)</dd></div>
+        <div><dt>Focus</dt><dd>Gameplay systems, combat and status effects, ray tracing and global illumination, real-time rendering, compute shaders, game audio</dd></div>
+        <div><dt>Tools</dt><dd>Git</dd></div>
+      </dl>
+
+      <h2>Outside of work</h2>
       <p>
         I love spending evenings playing couch co-op games with my wife or hanging out online with friends.
         I also DM a multi-year Dungeons &amp; Dragons campaign. Otherwise you'll probably find me painting
         miniatures next to my wife while she rebinds books and our puppy sleeps nearby.
       </p>
+      <figure class="figure">
+        <img src="{{ '/images/about/family.webp' | relative_url }}" alt="Devin with his family">
+      </figure>
     </div>
-  </div>
-</section>
+  </section>
+</div>

@@ -19,15 +19,9 @@ hero:
   type: youtube
   id: 5brtbToJBDI
   poster: /images/physarum/volume-ui.webp
-  label: Watch the simulation
 links:
   - { label: Try it on itch.io, url: "https://liamhealey.itch.io/slime-mold-simulation", icon: fab fa-itch-io }
   - { label: Video, url: "https://www.youtube.com/watch?v=5brtbToJBDI", icon: fab fa-youtube }
-stats:
-  - { value: "100K", label: "agents in the demo" }
-  - { value: "GPU", label: "compute + fragment" }
-  - { value: "3D", label: "trail texture" }
-  - { value: "2", label: "person team" }
 gallery:
   - { src: /images/physarum/volume-ui.webp, thumb: /images/physarum/volume-ui-sm.webp, caption: "The volume with the live parameter controls" }
   - { src: /images/physarum/volume.webp, thumb: /images/physarum/volume-sm.webp, caption: "Colored trail density inside the volume" }
@@ -42,10 +36,10 @@ Physarum, or slime mold, simulations are usually 2D: thousands of simple agents 
 We split the work cleanly. My partner built the **simulation** in a compute shader, and I built the **rendering**, a **volumetric ray marcher** in a fragment shader that turns the 3D trail data into the fog-like structures you can fly through.
 
 <div class="highlights">
-<div class="highlight"><i class="fa-solid fa-microchip"></i><strong>GPU end to end</strong><span>Simulation and rendering both stay on the GPU, connected through a 3D texture.</span></div>
-<div class="highlight"><i class="fa-solid fa-cloud"></i><strong>Volumetric ray marching</strong><span>My part: march through the volume, sample density, and accumulate color and opacity.</span></div>
-<div class="highlight"><i class="fa-solid fa-person-walking-arrow-right"></i><strong>Explorable</strong><span>Correct culling means the camera can enter the box and look around inside.</span></div>
-<div class="highlight"><i class="fa-solid fa-sliders"></i><strong>Live parameters</strong><span>Agent speed, sensor angle and distance, diffusion, and colors are all tweakable at runtime.</span></div>
+<div class="highlight"><strong>GPU end to end</strong><span>Simulation and rendering both stay on the GPU, connected through a 3D texture.</span></div>
+<div class="highlight"><strong>Volumetric ray marching</strong><span>My part: march through the volume, sample density, and accumulate color and opacity.</span></div>
+<div class="highlight"><strong>Explorable</strong><span>Correct culling means the camera can enter the box and look around inside.</span></div>
+<div class="highlight"><strong>Live parameters</strong><span>Agent speed, sensor angle and distance, diffusion, and colors are all tweakable at runtime.</span></div>
 </div>
 
 ## Pipeline

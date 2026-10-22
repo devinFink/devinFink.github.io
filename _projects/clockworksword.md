@@ -1,7 +1,6 @@
 ---
 title: Clockwork Sword
 order: 1
-featured: true
 category: game
 engine: Unity / C#
 role: Gameplay Engineer
@@ -16,23 +15,13 @@ cover: /images/clockworksword/cover.webp
 image: /images/clockworksword/cover.webp
 thumb: /images/clockworksword/cover-sm.webp
 thumb_video: /images/clockwork_trailer.mp4
-featured_points:
-  - Core engineer on a 37-person team
-  - Built the status-effect and gear systems
-  - Shipped on Steam and the Epic Games Store
 hero:
   type: youtube
   id: 2t8JvuDimqQ
   poster: /images/clockworksword/cover.webp
-  label: Watch the Early Access trailer
 links:
   - { label: View on Steam, url: "https://store.steampowered.com/app/3433330/", icon: fab fa-steam }
   - { label: Trailer, url: "https://www.youtube.com/watch?v=2t8JvuDimqQ", icon: fab fa-youtube }
-stats:
-  - { value: "37", label: "person team" }
-  - { value: "2", label: "core systems built" }
-  - { value: "2", label: "storefronts shipped" }
-  - { value: "C#", label: "Unity gameplay code" }
 gallery:
   - { src: /images/clockworksword/shot-1.webp, thumb: /images/clockworksword/shot-1-sm.webp, caption: "Lightning arcs between enemies after picking up the Pressure Pulse gear" }
   - { src: /images/clockworksword/shot-2.webp, thumb: /images/clockworksword/shot-2-sm.webp, caption: "The workbench where gears are socketed into the weapon" }
@@ -57,10 +46,10 @@ The game was built by a **37-person team** in Unity and released on **Steam** an
 I was a **core gameplay engineer**. I owned systems that sit underneath almost every fight in the game, and I worked directly with the art team to get UI and animation into the build.
 
 <div class="highlights">
-<div class="highlight"><i class="fa-solid fa-bolt"></i><strong>Status Effect system</strong><span>The framework every elemental hit, gear proc, and enemy ability goes through to apply timed, stacking effects.</span></div>
-<div class="highlight"><i class="fa-solid fa-gear"></i><strong>Gear system</strong><span>Gears that drop from enemies and socket into the weapon, modifying stats and hooking into combat.</span></div>
-<div class="highlight"><i class="fa-solid fa-palette"></i><strong>UI &amp; animation integration</strong><span>Partnered with the lead artist to wire UI art and animation into the game and iterate on feedback.</span></div>
-<div class="highlight"><i class="fa-solid fa-bug"></i><strong>Polish &amp; stabilization</strong><span>Bug triage, fixes, and polish through the late stages of production on a shared codebase.</span></div>
+<div class="highlight"><strong>Status Effect system</strong><span>The framework every elemental hit, gear proc, and enemy ability goes through to apply timed, stacking effects.</span></div>
+<div class="highlight"><strong>Gear system</strong><span>Gears that drop from enemies and socket into the weapon, modifying stats and hooking into combat.</span></div>
+<div class="highlight"><strong>UI &amp; animation integration</strong><span>Partnered with the lead artist to wire UI art and animation into the game and iterate on feedback.</span></div>
+<div class="highlight"><strong>Polish &amp; stabilization</strong><span>Bug triage, fixes, and polish through the late stages of production on a shared codebase.</span></div>
 </div>
 
 ## Systems Deep Dive
