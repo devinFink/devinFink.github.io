@@ -3,8 +3,7 @@ layout: default
 body_class: page-home
 ---
 {%- assign projects = site.projects | sort: "order" -%}
-{%- assign games = projects | where: "category", "game" -%}
-{%- assign graphics = projects | where: "category", "graphics" -%}
+{%- assign featured = projects | where: "featured", true | first -%}
 
 <section class="intro container">
   <img class="intro-photo" src="{{ '/images/about/profile-sm.webp' | relative_url }}" alt="Portrait of Devin Fink">
@@ -23,19 +22,28 @@ body_class: page-home
 </section>
 
 <section class="container work" id="work">
-  <h2 class="section-title">Games</h2>
+  {%- if featured %}
+  <a class="feature" href="{{ featured.url | relative_url }}">
+    <div class="feature-media">
+      <img src="{{ featured.feature_image | relative_url }}" alt="{{ featured.title }} gameplay">
+    </div>
+    <div class="feature-body">
+      <h2 class="feature-title">{{ featured.title }}</h2>
+      <p class="feature-desc">{{ featured.tagline }}</p>
+      <p class="tile-meta">{{ featured.meta }}</p>
+      <span class="feature-cta">Read the case study <i class="fa-solid fa-arrow-right"></i></span>
+    </div>
+  </a>
+  {%- endif %}
+
   <div class="work-grid">
-    {%- for p in games %}
+    {%- for p in projects %}
+    {%- unless p.featured %}
     {% include project-card.html project=p %}
+    {%- endunless %}
     {%- endfor %}
   </div>
 
-  <h2 class="section-title">Graphics</h2>
-  <div class="work-grid">
-    {%- for p in graphics %}
-    {% include project-card.html project=p %}
-    {%- endfor %}
-  </div>
   <p class="work-note">
     Currently building a DirectX 12 renderer and GPU particle system, working through Frank Luna's
     <em>Introduction to 3D Game Programming with DirectX 12</em>.

@@ -7,14 +7,15 @@ role: Programmer, Sound Design
 team: 6
 duration: 4 months
 platforms: Steam
+meta: "Shipped on Steam · Unity / C# · Team of 6"
 summary: Competitive split-screen 1v1 real-time strategy. I built the combat and health systems, code-driven pathing visuals, and all of the audio.
 tagline: A fast-paced, split-screen 1v1 real-time strategy game in which two Major Gods command armies of elementals across shifting landscapes.
 description: Case study of Elemental Engagements, a 1v1 RTS on Steam. Devin Fink built the combat, health and audio systems in Unity / C#.
 tags: [Real-Time Combat, Unity, C#, 1v1 Versus, Audio Systems]
 cover: /images/elementalengagements/cover.webp
 image: /images/elementalengagements/cover.webp
-thumb: /images/elementalengagements/cover-sm.webp
-thumb_alt: /images/elementalengagements/shot-3-sm.webp
+thumb: /images/elementalengagements/shot-3-sm.webp
+thumb_alt: /images/elementalengagements/cover-sm.webp
 hero:
   type: youtube
   id: Rc-zcAMk64U

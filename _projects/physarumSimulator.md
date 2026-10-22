@@ -1,12 +1,13 @@
 ---
 title: 3D Physarum Simulation
 permalink: /physarumSimulator
-order: 6
+order: 4
 category: graphics
 engine: Unity / HLSL
 role: Programmer, Rendering
 team: 2
 platforms: PC
+meta: "HLSL compute + ray marching · Team of 2"
 summary: Volumetric 3D slime-mold simulation. Agents run in a compute shader, and I rendered the result with GPU ray marching.
 tagline: The classic 2D slime-mold simulation taken into three dimensions. A compute shader runs the agents, and a volumetric ray marcher I wrote in HLSL renders a living, explorable cloud.
 description: Case study of a 3D physarum (slime mold) simulation rendered with volumetric ray marching in HLSL, by Devin Fink and Liam Healey.

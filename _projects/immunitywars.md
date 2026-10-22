@@ -1,20 +1,21 @@
 ---
 title: Immunity Wars
-order: 2
+order: 5
 category: game
 engine: Godot / GDScript
 role: Programmer, Sound Design
 team: 5
 duration: 4 months
 platforms: Steam
+meta: "Shipped on Steam · Godot · Team of 5"
 summary: Hex-based tactics game about how the immune system fights infection, built on a turn-based state machine and a modular ability system.
 tagline: A hex-based tactical strategy game that teaches players how the immune system fights infection, one turn at a time.
 description: Case study of Immunity Wars, a hex-based strategy game on Steam. Devin Fink built the turn, ability and selection systems in Godot and composed the soundtrack.
 tags: [Turn-Based Systems, Godot, GDScript, Ability System, Audio]
 cover: /images/immunitywars/cover.webp
 image: /images/immunitywars/cover.webp
-thumb: /images/immunitywars/cover-sm.webp
-thumb_alt: /images/immunitywars/shot-1-sm.webp
+thumb: /images/immunitywars/shot-1-sm.webp
+thumb_alt: /images/immunitywars/cover-sm.webp
 hero:
   type: youtube
   id: PFV41kASZh0

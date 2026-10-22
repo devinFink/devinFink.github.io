@@ -7,14 +7,16 @@ role: Gameplay Engineer
 team: 37
 duration: Ongoing
 platforms: Steam, Epic Games Store
+featured: true
+feature_image: /images/clockworksword/shot-7.webp
+meta: "Gameplay Engineer · Team of 37 · Steam & Epic"
 summary: Isometric hack-and-slash where gears socketed into your weapon change how you fight. I built the status-effect and gear systems.
 tagline: An isometric hack-and-slash set in a dark steampunk museum overrun by corrupted automata. You customize your weapon with gears scavenged from fallen enemies, so every fight is a chance to change how you play.
 description: Case study of Clockwork Sword, an isometric hack-and-slash shipped on Steam and Epic. Devin Fink built the status-effect and gear systems in Unity / C#.
 tags: [Gameplay Systems, Unity, C#, Status Effects, UI Integration]
 cover: /images/clockworksword/cover.webp
 image: /images/clockworksword/cover.webp
-thumb: /images/clockworksword/cover-sm.webp
-thumb_video: /images/clockwork_trailer.mp4
+thumb: /images/clockworksword/shot-7-sm.webp
 hero:
   type: youtube
   id: 2t8JvuDimqQ

@@ -1,12 +1,13 @@
 ---
 title: Ray Tracer
 permalink: /rayTracer
-order: 4
+order: 2
 category: graphics
 engine: C++
 role: Programmer
 team: Solo
 platforms: PC
+meta: "C++ from scratch · Solo"
 summary: From-scratch CPU ray tracer in C++ with photon mapping, Monte-Carlo global illumination, soft shadows, a BVH, and multithreading.
 tagline: A fully featured CPU ray tracer written from scratch in C++, with photon mapping, Monte-Carlo global illumination, multi-sampled soft shadows, and the acceleration structures and threading that make it practical.
 description: Case study of a from-scratch C++ ray tracer with photon mapping, Monte-Carlo global illumination, a BVH and multithreading, by Devin Fink.
