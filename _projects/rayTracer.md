@@ -11,19 +11,19 @@ summary: From-scratch CPU ray tracer in C++ with photon mapping, Monte-Carlo glo
 tagline: A fully featured CPU ray tracer written from scratch in C++, with photon mapping, Monte-Carlo global illumination, multi-sampled soft shadows, and the acceleration structures and threading that make it practical.
 description: Case study of a from-scratch C++ ray tracer with photon mapping, Monte-Carlo global illumination, a BVH and multithreading, by Devin Fink.
 tags: [C++, Ray Tracing, Global Illumination, BVH, Multithreading]
-cover: /images/raytracer/scene.webp
-image: /images/raytracer/scene.webp
-thumb: /images/raytracer/scene-sm.webp
-thumb_alt: /images/raytracer/glossiness-sm.webp
+cover: /images/raytracer/alchemy.webp
+image: /images/raytracer/alchemy.webp
+thumb: /images/raytracer/alchemy-sm.webp
+thumb_alt: /images/raytracer/scene-sm.webp
 hero:
   type: image
-  src: /images/raytracer/scene.webp
-  caption: Reflective and refractive spheres lit by an environment
+  src: /images/raytracer/alchemy.webp
+  caption: Glass, liquids and candlelight, with caustics cast onto the table
 gallery:
+  - { src: /images/raytracer/alchemy.webp, thumb: /images/raytracer/alchemy-sm.webp, caption: "Glass, liquids and candlelight, with colored caustics on the table" }
   - { src: /images/raytracer/scene.webp, thumb: /images/raytracer/scene-sm.webp, caption: "Reflection and refraction with environment lighting" }
   - { src: /images/raytracer/glossiness.webp, thumb: /images/raytracer/glossiness-sm.webp, caption: "Glossy reflections and multi-sampled soft shadows" }
   - { src: /images/raytracer/cornell.webp, thumb: /images/raytracer/cornell-sm.webp, caption: "Cornell box: color bleeding from global illumination" }
-  - { todo: "Render: a caustic under a glass sphere (photon mapping)" }
   - { todo: "Render: depth of field" }
   - { todo: "Render: textured geometry" }
 ---
