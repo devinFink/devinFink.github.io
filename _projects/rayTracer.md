@@ -4,14 +4,15 @@ permalink: /rayTracer
 order: 2
 category: graphics
 engine: C++
-role: Programmer
+role: Sole creator
 team: Solo
+duration: Aug 2025 – present
 platforms: PC
-meta: "C++ from scratch · Solo"
-summary: From-scratch CPU ray tracer in C++ with photon mapping, Monte-Carlo global illumination, soft shadows, a BVH, and multithreading.
-tagline: A fully featured CPU ray tracer written from scratch in C++, with photon mapping, Monte-Carlo global illumination, multi-sampled soft shadows, and the acceleration structures and threading that make it practical.
-description: Case study of a from-scratch C++ ray tracer with photon mapping, Monte-Carlo global illumination, a BVH and multithreading, by Devin Fink.
-tags: [C++, Ray Tracing, Global Illumination, BVH, Multithreading]
+meta: "Modern C++ · Thread pool · BVH · Solo"
+summary: Multithreaded CPU ray tracer in modern C++, with a BVH and Möller–Trumbore intersection, Monte-Carlo GI, and photon-mapped caustics.
+tagline: A multithreaded CPU ray tracer in modern C++. A thread pool keeps every core busy, a BVH with Möller–Trumbore triangle tests keeps traversal fast, and Monte-Carlo GI with photon and caustics maps handles the light transport.
+description: Case study of a multithreaded C++ ray tracer with a thread pool, BVH, Möller–Trumbore intersection, Monte-Carlo global illumination and photon mapping, by Devin Fink.
+tags: [Modern C++, Thread Pool, BVH, Monte-Carlo GI, Photon Mapping, Profiling]
 cover: /images/raytracer/alchemy.webp
 image: /images/raytracer/alchemy.webp
 thumb: /images/raytracer/alchemy-sm.webp
@@ -31,11 +32,11 @@ gallery:
 
 ## Overview
 
-I built a CPU ray tracer in C++ **from scratch**. It grew from basic shading into a physically inspired renderer with **Monte-Carlo global illumination** and **photon mapping**. Along the way, performance work became as important as the lighting itself: a **BVH** and a **multithreaded** render loop are what keep it usable.
+I built a CPU ray tracer in modern C++ **from scratch**. It grew from basic shading into a physically inspired renderer with **Monte-Carlo global illumination** and **photon mapping**. Along the way, performance work became as important as the lighting itself. A **thread pool** spreads the render across every core, a **BVH** with **Möller–Trumbore** triangle intersection keeps traversal cheap, and I **profiled the hot paths** and tuned them iteratively to cut render times.
 
 <div class="highlights">
 <div class="highlight"><strong>Light transport</strong><span>Monte-Carlo GI for indirect light and color bleeding, and photon mapping for caustics.</span></div>
-<div class="highlight"><strong>Performance</strong><span>Bounding volume hierarchy for intersection tests, and work split across CPU threads.</span></div>
+<div class="highlight"><strong>Performance</strong><span>A BVH with Möller–Trumbore triangle tests, a thread pool across all cores, and profiled, tuned hot paths.</span></div>
 <div class="highlight"><strong>Shading</strong><span>Blinn-Phong, reflection, refraction, textures, soft shadows, anti-aliasing, and depth of field.</span></div>
 <div class="highlight"><strong>The math</strong><span>Transforms, ray-object intersection, sampling, and light transport, implemented from first principles.</span></div>
 </div>
@@ -52,13 +53,15 @@ The renderer runs in **two passes**. First, photons are shot from the lights, bo
 
 ### Acceleration: the BVH
 
-Testing every ray against every object doesn't scale. The scene's geometry is organized into a **bounding volume hierarchy**, a tree of boxes, so each ray only tests the few primitives whose boxes it actually passes through. Both passes rely on it, so it pays off twice.
+Testing every ray against every object doesn't scale. The scene's geometry is organized into a **bounding volume hierarchy**, a tree of boxes, so each ray only tests the few primitives whose boxes it actually passes through. Both passes rely on it, so it pays off twice. At the leaves, triangles are tested with the **Möller–Trumbore** algorithm, which computes the hit and its barycentric coordinates in one pass without precomputing a plane equation.
+
+I profiled traversal and intersection as the hottest paths in the renderer and tuned them iteratively, measuring each change against render time.
 
 {% include todo.html text="How do you split nodes (midpoint, SAH)? Leaf size? Add a short C++ snippet of the traversal in a ```cpp block." %}
 
 ### Global illumination & photon mapping
 
-Indirect lighting is estimated with **Monte-Carlo sampling**: secondary rays bounce in random directions and their contributions are averaged. That's what gives the Cornell box its red and green color bleeding. Caustics, the light focused through glass, are hard to find with random sampling, so the **photon map** handles them. Photons follow the light forward, and the renderer estimates their density at each hit point.
+Indirect lighting is estimated with **Monte-Carlo sampling**: secondary rays bounce in random directions and their contributions are averaged. That's what gives the Cornell box its red and green color bleeding. Caustics, the light focused through glass, are hard to find with random sampling, so **photon and caustics maps** handle them. Photons follow the light forward, and the renderer estimates their density at each hit point.
 
 {% include figure.html src="/images/raytracer/cornell.webp" caption="Color bleeding from Monte-Carlo global illumination in a Cornell box." %}
 
@@ -72,9 +75,9 @@ Area lights are sampled many times per shading point to produce soft shadow edge
 
 ### Multithreading
 
-Rendering is embarrassingly parallel: each pixel is independent. The image is split into work that is distributed across CPU threads, so render time scales with core count.
+Rendering is embarrassingly parallel: each pixel is independent. Render work is fed to a **thread pool** sized to the machine, so every hardware thread stays busy and render time scales with core count.
 
-{% include todo.html text="How is the work split (rows, tiles, a job queue)? Fill in real numbers below: render time single-threaded vs multithreaded, and with vs without the BVH." %}
+{% include todo.html text="How is work divided into pool jobs (rows, tiles)? Then fill in the real numbers below." %}
 
 {% include todo.html text="Add a performance table here, e.g. | Configuration | Render time |, with brute force vs BVH and 1 thread vs N threads, for one named scene and resolution." %}
 

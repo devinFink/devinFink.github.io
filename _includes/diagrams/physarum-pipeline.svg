@@ -2,7 +2,7 @@
 <title>Physarum simulation and rendering pipeline</title>
 <defs><marker id="ah-physarum-pipeline" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7f849c"/></marker></defs>
 <rect class="zone" x="4" y="16" width="812" height="104" rx="14"/>
-<text class="dg-h" x="18" y="36">COMPUTE SHADER · SIMULATION (PARTNER)</text>
+<text class="dg-h" x="18" y="36">COMPUTE SHADER · AGENT SIMULATION</text>
 <rect class="box " x="14" y="52" width="112" height="48" rx="10"/>
 <text x="70" y="81" text-anchor="middle">Sense</text>
 <rect class="box " x="146" y="52" width="112" height="48" rx="10"/>
@@ -21,7 +21,7 @@
 <text x="415" y="167" text-anchor="middle">3D trail texture</text>
 <path class="edge edge-mauve" d="M637,100 L637,162 L520,162" marker-end="url(#ah-physarum-pipeline)"/>
 <rect class="zone" x="4" y="204" width="812" height="154" rx="14"/>
-<text class="dg-h" x="18" y="224">FRAGMENT SHADER · VOLUMETRIC RAY MARCH (ME)</text>
+<text class="dg-h" x="18" y="224">FRAGMENT SHADER · VOLUMETRIC RAY MARCH</text>
 <rect class="box box-blue" x="14" y="244" width="150" height="52" rx="10"/>
 <text x="89" y="267" text-anchor="middle">Ray–box entry</text>
 <text class="dg-s" x="89" y="284" text-anchor="middle">or start at camera</text>

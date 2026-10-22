@@ -48,8 +48,8 @@
     border: 1px solid var(--line);
     background: var(--panel-2);
 }
-.feature-media img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s var(--ease); }
-.feature:hover .feature-media img { transform: scale(1.02); }
+.feature-media img, .feature-media video { width: 100%; height: 100%; object-fit: cover; transition: transform .6s var(--ease); }
+.feature:hover .feature-media img, .feature:hover .feature-media video { transform: scale(1.02); }
 .feature-title { font-size: clamp(26px, 3vw, 32px); letter-spacing: -0.02em; transition: color .15s ease; }
 .feature:hover .feature-title { color: var(--blue); }
 .feature-desc { margin: 12px 0 14px; color: var(--muted); line-height: 1.65; }

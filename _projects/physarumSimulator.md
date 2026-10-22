@@ -4,12 +4,12 @@ permalink: /physarumSimulator
 order: 4
 category: graphics
 engine: Unity / HLSL
-role: Programmer, Rendering
+role: Co-creator
 team: 2
 platforms: PC
-meta: "HLSL compute + ray marching · Team of 2"
-summary: Volumetric 3D slime-mold simulation. Agents run in a compute shader, and I rendered the result with GPU ray marching.
-tagline: The classic 2D slime-mold simulation taken into three dimensions. A compute shader runs the agents, and a volumetric ray marcher I wrote in HLSL renders a living, explorable cloud.
+meta: "GPU compute + volumetric ray marching · Team of 2"
+summary: Real-time 3D slime-mold simulation that runs entirely on the GPU. Agents run in a compute shader, and a volumetric ray marcher I wrote in HLSL renders them.
+tagline: A real-time, GPU-resident agent simulation of slime mold in three dimensions. Thousands of agents run in parallel in a compute shader, and a volumetric ray marcher renders the live state as a cloud you can fly through.
 description: Case study of a 3D physarum (slime mold) simulation rendered with volumetric ray marching in HLSL, by Devin Fink and Liam Healey.
 tags: [HLSL, Compute Shaders, Ray Marching, Volumetrics, Unity]
 cover: /images/physarum/volume.webp
@@ -34,10 +34,10 @@ gallery:
 
 Physarum, or slime mold, simulations are usually 2D: thousands of simple agents leave trails and follow each other's, and network-like patterns emerge. My partner and I took it into **three dimensions**. That turned an image problem into a **volume rendering** problem.
 
-We split the work cleanly. My partner built the **simulation** in a compute shader, and I built the **rendering**, a **volumetric ray marcher** in a fragment shader that turns the 3D trail data into the fog-like structures you can fly through.
+My partner and I built it together. I **co-developed the compute-shader simulation**, which models thousands of agents in parallel on the GPU. I wrote the **volumetric ray marcher**, a fragment shader that renders the 3D trail data as fog-like structures you can fly through. I also **designed the data flow and synchronization** between the two stages, so the simulation and the renderer share one GPU texture with no round trip to the CPU.
 
 <div class="highlights">
-<div class="highlight"><strong>GPU end to end</strong><span>Simulation and rendering both stay on the GPU, connected through a 3D texture.</span></div>
+<div class="highlight"><strong>GPU end to end</strong><span>Simulation and rendering both stay on the GPU. I designed the hand-off through a shared 3D texture.</span></div>
 <div class="highlight"><strong>Volumetric ray marching</strong><span>My part: march through the volume, sample density, and accumulate color and opacity.</span></div>
 <div class="highlight"><strong>Explorable</strong><span>Correct culling means the camera can enter the box and look around inside.</span></div>
 <div class="highlight"><strong>Live parameters</strong><span>Agent speed, sensor angle and distance, diffusion, and colors are all tweakable at runtime.</span></div>
@@ -45,7 +45,7 @@ We split the work cleanly. My partner built the **simulation** in a compute shad
 
 ## Pipeline
 
-Each frame, the compute shader updates every agent: it **senses** trail ahead, **rotates** toward the strongest signal, **moves**, and **deposits** more trail. The trail field then **diffuses and decays**. The result lives in a **3D texture**, which my fragment shader reads to render the volume.
+Each frame, the compute shader updates every agent in parallel: it **senses** trail ahead, **rotates** toward the strongest signal, **moves**, and **deposits** more trail. The trail field then **diffuses and decays**. The result lives in a **3D texture**, which my fragment shader reads to render the volume.
 
 {% include figure.html svg="diagrams/physarum-pipeline.svg" caption="Simulation in a compute shader, then rendering by volumetric ray marching, joined by a 3D texture." %}
 

@@ -13,6 +13,11 @@
         window.addEventListener('scroll', onScroll, { passive: true });
     }
 
+    // Respect reduced-motion settings: stop autoplaying clips and show the poster instead.
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        $$('video[autoplay]').forEach(v => { v.removeAttribute('autoplay'); v.pause(); });
+    }
+
     // Project tiles with a preview clip play it on hover.
     $$('.tile[data-video]').forEach(tile => {
         const video = $('video', tile);

@@ -9,6 +9,7 @@ duration: Ongoing
 platforms: Steam, Epic Games Store
 featured: true
 feature_image: /images/clockworksword/shot-7.webp
+feature_video: /images/clockworksword/gameplay-loop.mp4
 meta: "Gameplay Engineer · Team of 37 · Steam & Epic"
 summary: Isometric hack-and-slash where gears socketed into your weapon change how you fight. I built the status-effect and gear systems.
 tagline: An isometric hack-and-slash set in a dark steampunk museum overrun by corrupted automata. You customize your weapon with gears scavenged from fallen enemies, so every fight is a chance to change how you play.

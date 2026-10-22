@@ -1,8 +1,8 @@
 title: Devin Fink
-tagline: Gameplay & Graphics Engineer
+tagline: Software Engineer
 description: >-
-  Devin Fink, gameplay and graphics engineer. Shipped games on Steam plus
-  real-time rendering projects in C++, C#, HLSL and OpenGL.
+  Devin Fink, software engineer focused on high-performance C++, graphics and
+  simulation. Ray tracers, GPU simulations, and three games shipped on Steam.
 url: https://www.devinfink.dev
 baseurl: ""
 repository: devinFink/devinFink.github.io
@@ -14,7 +14,7 @@ email: devinfink007@gmail.com
 phone: "(801) 441-9442"
 linkedin: https://www.linkedin.com/in/devin-fink-727450235/
 github: https://github.com/devinFink
-resume_pdf: /images/JulyResume.pdf
+resume_pdf: /images/Devin_Fink_Resume.pdf
 
 collections:
   projects:

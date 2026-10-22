@@ -8,10 +8,10 @@ body_class: page-home
 <section class="intro container">
   <img class="intro-photo" src="{{ '/images/about/profile-sm.webp' | relative_url }}" alt="Portrait of Devin Fink">
   <h1>Devin Fink</h1>
-  <p class="intro-role">Gameplay &amp; Graphics Engineer</p>
+  <p class="intro-role">Software Engineer &middot; High-Performance C++, Systems &amp; Simulation</p>
   <p class="intro-bio">
-    Computer Science student at the University of Utah, emphasis in Game Development.
-    I've shipped three games on Steam as a gameplay programmer and write rendering code in C++ and HLSL.
+    Software engineer at WebstaurantStore and University of Utah Computer Science graduate.
+    I write high-performance C++, from ray tracers to GPU simulations, and I've shipped three games on Steam.
   </p>
   <nav class="intro-links" aria-label="Contact">
     <a href="{{ '/resume' | relative_url }}">Resume</a>
@@ -25,7 +25,11 @@ body_class: page-home
   {%- if featured %}
   <a class="feature" href="{{ featured.url | relative_url }}">
     <div class="feature-media">
+      {%- if featured.feature_video %}
+      <video src="{{ featured.feature_video | relative_url }}" poster="{{ featured.feature_image | relative_url }}" autoplay muted loop playsinline aria-label="{{ featured.title }} gameplay"></video>
+      {%- else %}
       <img src="{{ featured.feature_image | relative_url }}" alt="{{ featured.title }} gameplay">
+      {%- endif %}
     </div>
     <div class="feature-body">
       <h2 class="feature-title">{{ featured.title }}</h2>

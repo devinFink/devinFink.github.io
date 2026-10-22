@@ -49,6 +49,10 @@
 .resume-summary ul { padding-left: 18px; }
 .resume-summary li { margin-bottom: 4px; }
 
+.resume-skills { margin-bottom: 48px; }
+.resume-skills div { grid-template-columns: 200px 1fr; }
+@media (max-width: 520px) { .resume-skills div { grid-template-columns: 1fr; } }
+
 .courses {
     columns: 2;
     column-gap: 40px;
