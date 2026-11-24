@@ -6,6 +6,7 @@ category: graphics
 engine: Unity / HLSL
 role: Co-creator
 team: 2
+duration: Nov – Dec 2025
 platforms: PC
 meta: "GPU compute + volumetric ray marching · Team of 2"
 summary: Real-time 3D slime-mold simulation that runs entirely on the GPU. Agents run in a compute shader, and a volumetric ray marcher I wrote in HLSL renders them.

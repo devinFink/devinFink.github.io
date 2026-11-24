@@ -83,4 +83,7 @@ Rendering is embarrassingly parallel: each pixel is independent. Render work is 
 
 ## Results & Learnings
 
+- Built **end to end from first principles**, from ray-object intersection math up to Monte-Carlo GI and photon-mapped caustics.
+- Profiling made performance a measured loop: every change to traversal and intersection was checked against render time.
+
 {% include todo.html text="What did building this teach you that you now use in real-time work? What would you add next (BVH on the GPU, importance sampling, a denoiser)?" %}
